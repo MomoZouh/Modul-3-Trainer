@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111a3a">
+  <title>Netzwerk Prüfungstrainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" id="brandHome">
+    <span class="brand-mark">N</span>
+    <span><b>Netzwerk</b><small>Prüfungstrainer</small></span>
+  </a>
+  <button id="backHome" class="link-btn hidden">← Start</button>
+</header>
+
+<main>
+  <section id="home" class="page">
+    <div class="hero">
+      <div class="tag">ITA · Lernquiz</div>
+      <h1>Bereit für die<br><span>Netzwerkprüfung?</span></h1>
+      <p>Übe die Inhalte deiner Präsentationen zu Netzwerken, OSI und TCP/IP mit realistischen Multiple-Choice-Fragen.</p>
+    </div>
+
+    <div class="mode-card">
+      <div class="mode-title">Was möchtest du lernen?</div>
+      <div id="categoryGrid" class="category-grid"></div>
+    </div>
+
+    <div class="tips">
+      <div><span>✓</span><b>Direktes Feedback</b><small>Du siehst nach jeder Antwort die Erklärung.</small></div>
+      <div><span>↗</span><b>Zufällige Reihenfolge</b><small>Fragen und Antworten werden gemischt.</small></div>
+      <div><span>★</span><b>Auswertung</b><small>Am Ende bekommst du Prozentzahl und Punktestand.</small></div>
+    </div>
+
+    <div class="source-note">
+      <b>Fragenbasis:</b> Die Fragen wurden aus den beiden hochgeladenen Präsentationen erstellt:
+      „Was ist ein Netzwerk?“ und „OSI- und TCP/IP-Modelle verstehen“.
+    </div>
+  </section>
+
+  <section id="quiz" class="page hidden">
+    <div class="quiz-top">
+      <div>
+        <div id="quizCategory" class="tag"></div>
+        <h2 id="counter">Frage 1 von 10</h2>
+      </div>
+      <div id="score" class="score">0 / 0</div>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <article class="question-card">
+      <div id="qNumber" class="q-number">01</div>
+      <h1 id="question"></h1>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden"></div>
+    </article>
+
+    <div class="quiz-bottom">
+      <button id="next" class="primary" disabled>Weiter →</button>
+    </div>
+  </section>
+
+  <section id="result" class="page hidden">
+    <div class="result-card">
+      <div class="result-star">★</div>
+      <div class="tag">Auswertung</div>
+      <h1 id="resultHeadline">Geschafft!</h1>
+      <div id="percent" class="percent">0%</div>
+      <p id="resultDescription"></p>
+      <div class="stats">
+        <div><b id="right">0</b><span>Richtig</span></div>
+        <div><b id="wrong">0</b><span>Falsch</span></div>
+        <div><b id="total">0</b><span>Fragen</span></div>
+      </div>
+      <div class="result-buttons">
+        <button id="again" class="primary">Nochmal</button>
+        <button id="choose" class="secondary">Andere Kategorie</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Erstellt für deine Prüfungsvorbereitung · Fragen basieren auf den bereitgestellten Präsentationen.</footer>
+<script src="fragen.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
