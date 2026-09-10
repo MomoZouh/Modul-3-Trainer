@@ -5,14 +5,28 @@ const categoryGrid = document.getElementById("categoryGrid");
 const backHome = document.getElementById("backHome");
 const brandHome = document.getElementById("brandHome");
 
-const eduBites = [...new Set(quizData.map(x => x.eduBite || "eduBite 1"))];
-
 const icons = ["📘","📗","📙","📕","📓","📔"];
 
+function getEduBites(){
+  return [...new Set(quizData.map(q => q.eduBite || "eduBite 1"))];
+}
+
+function getProgress(){
+  try {
+    return JSON.parse(localStorage.getItem("questionProgress") || "{}");
+  } catch(e) {
+    return {};
+  }
+}
+
+function saveProgress(progress){
+  localStorage.setItem("questionProgress", JSON.stringify(progress));
+}
+
 function getWrongQuestions(){
-  try{
+  try {
     return JSON.parse(localStorage.getItem("wrongQuestions") || "[]");
-  }catch(e){
+  } catch(e) {
     return [];
   }
 }
@@ -21,16 +35,23 @@ function saveWrongQuestions(ids){
   localStorage.setItem("wrongQuestions", JSON.stringify([...new Set(ids)]));
 }
 
-function getWrongCount(){
-  return getWrongQuestions().filter(id => quizData.some(q => q.id === id)).length;
+function getLearnedCount(items){
+  const progress = getProgress();
+  return items.filter(q => progress[q.id] === true).length;
 }
 
-function makeCategoryCard(title, description, count, action, icon){
+function percentOf(items){
+  if(!items.length) return 0;
+  return Math.round((getLearnedCount(items) / items.length) * 100);
+}
+
+function makeCategoryCard(title, description, count, action, icon, extraHtml=""){
   const el = document.createElement("div");
   el.className = "category";
   el.innerHTML = `<div class="icon">${icon}</div>
     <b>${title}</b>
     <small>${description}</small>
+    ${extraHtml}
     <button>${count} ${count === 1 ? "Frage" : "Fragen"} starten</button>`;
   el.querySelector("button").addEventListener("click", action);
   return el;
@@ -39,40 +60,69 @@ function makeCategoryCard(title, description, count, action, icon){
 function renderCategories(){
   categoryGrid.innerHTML = "";
 
+  const eduBites = getEduBites();
+
   eduBites.forEach((bite, i) => {
-    const count = quizData.filter(q => (q.eduBite || "eduBite 1") === bite).length;
+    const items = quizData.filter(q => (q.eduBite || "eduBite 1") === bite);
+    const learned = getLearnedCount(items);
+    const pct = percentOf(items);
+
     categoryGrid.appendChild(
       makeCategoryCard(
         bite,
-        "Alle Fragen aus diesem eduBite",
-        count,
+        `${learned} / ${items.length} Fragen richtig gelernt · ${pct}%`,
+        items.length,
         () => startQuiz(bite, "edubite"),
         icons[i % icons.length]
       )
     );
   });
 
-  const allCount = quizData.length;
-  categoryGrid.appendChild(
-    makeCategoryCard(
-      "🎲 Alle Fragen – Zufall",
-      "Alle Fragen aus allen eduBites komplett gemischt",
-      allCount,
-      startRandomQuiz,
-      "🎲"
-    )
+  const allItems = quizData;
+  const allLearned = getLearnedCount(allItems);
+  const allPct = percentOf(allItems);
+
+  let perEdu = eduBites.map(bite => {
+    const items = quizData.filter(q => (q.eduBite || "eduBite 1") === bite);
+    return `<div class="progress-line"><span>${bite}</span><strong>${getLearnedCount(items)} / ${items.length} · ${percentOf(items)}%</strong></div>`;
+  }).join("");
+
+  const progressHtml = `
+    <div class="progress-summary">
+      <div class="progress-main"><strong>${allLearned} / ${allItems.length}</strong> richtig gelernt · <strong>${allPct}%</strong></div>
+      <div class="progress-track"><div class="progress-fill" style="width:${allPct}%"></div></div>
+      ${perEdu}
+    </div>
+  `;
+
+  const randomCard = makeCategoryCard(
+    "🎲 Alle Fragen – Zufall",
+    "Alle Fragen aus allen eduBites komplett gemischt",
+    allItems.length,
+    startRandomQuiz,
+    "🎲",
+    progressHtml
   );
 
-  const wrongCount = getWrongCount();
-  const wrongCard = makeCategoryCard(
-    "❌ Meine falschen Fragen",
-    "Fragen, die du zuletzt falsch beantwortet hast",
-    wrongCount,
-    startWrongQuiz,
-    "❌"
+  const openButton = document.createElement("button");
+  openButton.className = "secondary progress-open-button";
+  openButton.textContent = `🎯 Nur offene Fragen (${allItems.length - allLearned})`;
+  openButton.addEventListener("click", startOpenQuestionsQuiz);
+  randomCard.appendChild(openButton);
+  categoryGrid.appendChild(randomCard);
+
+  const wrongCount = getWrongQuestions().filter(id => quizData.some(q => q.id === id)).length;
+  categoryGrid.appendChild(
+    makeCategoryCard(
+      "❌ Meine falschen Fragen",
+      wrongCount
+        ? `${wrongCount} falsch beantwortete Fragen gespeichert`
+        : "Noch keine falschen Fragen gespeichert",
+      wrongCount,
+      startWrongQuiz,
+      "❌"
+    )
   );
-  wrongCard.id = "wrongCategory";
-  categoryGrid.appendChild(wrongCard);
 }
 
 renderCategories();
@@ -107,10 +157,10 @@ function prepareQuestions(items){
 function startQuiz(category, mode="edubite"){
   currentCategory = category;
   currentMode = mode;
-  const items = quizData.filter(x =>
+  const items = quizData.filter(q =>
     mode === "edubite"
-      ? (x.eduBite || "eduBite 1") === category
-      : x.cat === category
+      ? (q.eduBite || "eduBite 1") === category
+      : q.cat === category
   );
   quizQuestions = prepareQuestions(items);
   current = 0;
@@ -124,6 +174,25 @@ function startRandomQuiz(){
   currentCategory = "Alle Fragen · Zufall";
   currentMode = "random";
   quizQuestions = prepareQuestions(quizData);
+  current = 0;
+  score = 0;
+  wrongIdsThisQuiz = [];
+  showScreen("quiz");
+  renderQuestion();
+}
+
+function startOpenQuestionsQuiz(){
+  const progress = getProgress();
+  const items = quizData.filter(q => progress[q.id] !== true);
+
+  if(items.length === 0){
+    alert("Du hast bereits alle Fragen mindestens einmal richtig beantwortet. Stark!");
+    return;
+  }
+
+  currentCategory = "Nur offene Fragen";
+  currentMode = "open";
+  quizQuestions = prepareQuestions(items);
   current = 0;
   score = 0;
   wrongIdsThisQuiz = [];
@@ -163,7 +232,7 @@ function renderQuestion(){
   answered=false;
   const item=quizQuestions[current];
 
-  const label = currentMode === "random"
+  const label = currentMode === "random" || currentMode === "open"
     ? (item.eduBite || "eduBite 1")
     : currentCategory;
 
@@ -204,9 +273,15 @@ function selectAnswer(index){
 
   const isCorrect=item.options[index].correct;
 
+  // Permanent learning progress: a question is "learned" once answered correctly at least once.
+  const progress = getProgress();
   if(isCorrect){
     score++;
-  }else{
+    progress[item.id] = true;
+  }
+  saveProgress(progress);
+
+  if(!isCorrect){
     wrongIdsThisQuiz.push(item.id);
   }
 
@@ -231,14 +306,12 @@ document.getElementById("next").addEventListener("click",()=>{
 });
 
 function finishQuiz(){
-  // Update the persistent wrong-question list:
-  // - questions answered incorrectly in this quiz are added
-  // - questions answered correctly in the "wrong questions" quiz are removed
   const existing = new Set(getWrongQuestions());
 
   if(currentMode === "wrong"){
     const answeredIds = new Set(quizQuestions.slice(0,current+1).map(q=>q.id));
     const stillWrong = new Set(wrongIdsThisQuiz);
+
     answeredIds.forEach(id=>{
       if(!stillWrong.has(id)) existing.delete(id);
     });
@@ -247,7 +320,6 @@ function finishQuiz(){
   }
 
   saveWrongQuestions([...existing]);
-  renderCategories();
 
   const total=quizQuestions.length;
   const percent=Math.round((score/total)*100);
@@ -265,12 +337,15 @@ function finishQuiz(){
   document.getElementById("resultDescription").textContent =
     `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
 
+  renderCategories();
   showScreen("result");
 }
 
 document.getElementById("again").addEventListener("click",()=>{
   if(currentMode === "random"){
     startRandomQuiz();
+  }else if(currentMode === "open"){
+    startOpenQuestionsQuiz();
   }else if(currentMode === "wrong"){
     startWrongQuiz();
   }else{
