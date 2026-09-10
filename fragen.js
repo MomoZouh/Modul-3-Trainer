@@ -111,7 +111,6 @@ const quizData = [
     "c": 0,
     "e": "Notebooks, Server und Netzwerkdrucker erzeugen oder konsumieren Daten und sind damit typische Endsysteme."
   },
-
   {
     "cat": "Client-Server & P2P",
     "q": "Welche Rolle hat ein Client in einer Client-Server-Beziehung?",
@@ -220,7 +219,6 @@ const quizData = [
     "c": 0,
     "e": "Strukturierte P2P-Netze organisieren Teilnehmer so, dass Ressourcen gezielter gefunden werden können."
   },
-
   {
     "cat": "Server & Netzwerktypen",
     "q": "Nach welchen beiden Kriterien werden Netzwerktypen besonders betrachtet?",
@@ -329,7 +327,6 @@ const quizData = [
     "c": 0,
     "e": "Ein PAN umfasst nur wenige Meter und verbindet typischerweise ein Gerät mit direkt zugehörigem Zubehör."
   },
-
   {
     "cat": "Appliances & Dienste",
     "q": "Was ist eine Netzwerk-Appliance?",
@@ -474,7 +471,6 @@ const quizData = [
     "c": 0,
     "e": "Der Dienst weist neu angeschlossenen Geräten automatisch Netzwerkadressen und weitere Konfigurationsparameter zu."
   },
-
   {
     "cat": "OSI-Grundlagen",
     "q": "Welche Reihenfolge der OSI-Schichten ist von unten nach oben korrekt?",
@@ -595,7 +591,6 @@ const quizData = [
     "c": 0,
     "e": "OSI beschreibt Funktionen in sieben Schichten und dient als Referenzmodell."
   },
-
   {
     "cat": "Kapselung & PDU",
     "q": "Welche Reihenfolge beschreibt die Kapselung von oben nach unten korrekt?",
@@ -704,7 +699,6 @@ const quizData = [
     "c": 0,
     "e": "Stimmt die Prüfsumme nicht, wird der Frame als beschädigt erkannt und verworfen."
   },
-
   {
     "cat": "Adressierung & Geräte",
     "q": "Welche Adresse gehört zur lokalen Adressierung der Data-Link-Schicht?",
@@ -801,7 +795,6 @@ const quizData = [
     "c": 0,
     "e": "MAC-Adressen und Switch-Weiterleitung gehören zur Sicherungsschicht, also Layer 2."
   },
-
   {
     "cat": "Praxis & Protokolle",
     "q": "Ein Notebook ruft eine Webseite ab. Welche Abfolge beschreibt die Kapselung am besten?",
@@ -898,7 +891,6 @@ const quizData = [
     "c": 0,
     "e": "Das Skript beschreibt OSI als feineres Analyse- und Referenzmodell und TCP/IP als praktisch implementierte Protokollwelt."
   },
-
   {
     "cat": "TCP/IP & OSI",
     "q": "Wie viele Schichten hat das im Skript beschriebene TCP/IP-Modell?",
