@@ -1,1294 +1,1010 @@
 // Fragenpool aus den beiden Lernscripten
 // Keine Verweise auf "Präsentationen" oder "Lernscripte" in den Fragen.
-// script.js mischt die Antwortmöglichkeiten bei jedem Quizstart neu.
+// script.js mischt die Antwortmöglichkeiten bei jedem Test neu.
 
 const quizData = [
-
-  // =========================
-  // NETZWERK-GRUNDLAGEN
-  // =========================
-
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welche Aussage beschreibt ein Netzwerk am treffendsten?",
-    a: [
-      "Ein Zusammenschluss vernetzter Geräte, die Daten austauschen können",
-      "Ein einzelner Computer mit mehreren Programmen",
-      "Nur eine Verbindung zwischen zwei Servern",
-      "Ein Programm zur Verwaltung von Dateien"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Welche Aussage beschreibt ein Netzwerk am treffendsten?",
+    "a": [
+      "Mindestens zwei Systeme tauschen über ein Medium Daten nach gemeinsamen Regeln aus.",
+      "Mehrere Programme laufen auf demselben Rechner und teilen sich Speicher.",
+      "Ein einzelner Rechner stellt Daten für mehrere lokale Benutzer bereit.",
+      "Mehrere Kabel werden ohne gemeinsame Kommunikationsregeln miteinander verbunden."
     ],
-    c: 0,
-    e: "Ein Netzwerk verbindet Geräte miteinander, damit sie Daten und Informationen austauschen können."
+    "c": 0,
+    "e": "Ein Netzwerk besteht aus mindestens zwei Systemen, einem Übertragungsmedium und gemeinsamen Protokollen."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Was bezeichnet der Begriff „Knoten“ in einem Netzwerk?",
-    a: [
-      "Ein Gerät bzw. einen Netzwerkteilnehmer",
-      "Nur einen Router",
-      "Nur ein Netzwerkkabel",
-      "Eine Firewall-Regel"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Was bezeichnet der Begriff „Knoten“ in einem Netzwerk?",
+    "a": [
+      "Eine physisch vorhandene Komponente mit Netzwerkschnittstelle, die Daten verarbeitet.",
+      "Eine reine Kabelstrecke zwischen zwei angeschlossenen Geräten.",
+      "Ein Protokoll, das Regeln für die Datenübertragung festlegt.",
+      "Eine logische Sitzung zwischen zwei laufenden Anwendungen."
     ],
-    c: 0,
-    e: "Ein Knoten ist ein Netzwerkteilnehmer, beispielsweise ein Computer, Drucker oder Server."
+    "c": 0,
+    "e": "Ein Knoten ist eine physisch vorhandene Netzwerkkomponente mit mindestens einer Netzwerkschnittstelle."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Was ist bei einem Netzwerk unter einem Link zu verstehen?",
-    a: [
-      "Eine Verbindung zwischen zwei Knoten",
-      "Ein Benutzerkonto",
-      "Eine IP-Adresse",
-      "Ein Serverprogramm"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Was ist bei einem Netzwerk unter einem Link zu verstehen?",
+    "a": [
+      "Die Kommunikationsstrecke zwischen zwei Knoten.",
+      "Die Anwendung, die Daten über das Netzwerk bereitstellt.",
+      "Die Adresse eines einzelnen Endgeräts.",
+      "Die Tabelle, die ein Router für seine Weiterleitung nutzt."
     ],
-    c: 0,
-    e: "Ein Link bezeichnet die Verbindung zwischen zwei Netzwerkknoten."
+    "c": 0,
+    "e": "Ein Link ist die physische oder logische Kommunikationsstrecke zwischen zwei Knoten."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Was ist ein Endsystem?",
-    a: [
-      "Ein Gerät, das Daten sendet oder empfängt und von einem Benutzer oder einer Anwendung genutzt wird",
-      "Ein Gerät, das ausschließlich Daten weiterleitet",
-      "Ein Netzwerkkabel",
-      "Ein Protokoll zur Adressierung"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Welches Gerät ist in der beschriebenen Funktion ein Endsystem?",
+    "a": [
+      "Ein Netzwerkdrucker, der Druckdaten selbst verarbeitet.",
+      "Ein Switch, der Frames zwischen Geräten weiterleitet.",
+      "Ein Router, der Pakete zwischen Netzwerken vermittelt.",
+      "Ein Repeater, der ein Signal aufbereitet."
     ],
-    c: 0,
-    e: "Endsysteme sind beispielsweise PCs, Smartphones, Drucker oder Server. Sie erzeugen oder empfangen Daten."
+    "c": 0,
+    "e": "Ein Endsystem erzeugt oder konsumiert Daten. Ein Netzwerkdrucker gehört dazu."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welche Aufgabe hat ein Zwischensystem?",
-    a: [
-      "Es vermittelt bzw. leitet Daten zwischen Netzwerkteilnehmern weiter",
-      "Es erstellt ausschließlich Dokumente",
-      "Es ersetzt jede IP-Adresse durch eine MAC-Adresse",
-      "Es dient nur als Datenspeicher"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Welche Eigenschaft kennzeichnet ein Zwischensystem?",
+    "a": [
+      "Es leitet Daten zwischen Endsystemen weiter.",
+      "Es stellt immer die eigentliche Anwendung für Benutzer bereit.",
+      "Es muss die übertragenen Anwendungsdaten vollständig verstehen.",
+      "Es ist grundsätzlich ein physischer Server mit mehreren Festplatten."
     ],
-    c: 0,
-    e: "Zwischensysteme wie Switches und Router übernehmen Vermittlungs- und Weiterleitungsaufgaben."
+    "c": 0,
+    "e": "Zwischensysteme vermitteln Daten zwischen Endsystemen und müssen die Anwendungsebene nicht verstehen."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welches Gerät ist typischerweise ein Endsystem?",
-    a: [
-      "PC",
-      "Switch",
-      "Router",
-      "Firewall"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Zwei Geräte sind direkt mit einem einzigen Kabel verbunden. Welche Bezeichnung passt?",
+    "a": [
+      "Punkt-zu-Punkt-Link",
+      "Virtuelle Appliance",
+      "Client-Server-Rolle",
+      "Netzwerksegmentierung"
     ],
-    c: 0,
-    e: "Ein PC ist ein Endsystem, weil er Daten für Anwendungen erzeugt und empfängt."
+    "c": 0,
+    "e": "Eine direkte Verbindung zwischen zwei Knoten über einen einzelnen Link ist ein Punkt-zu-Punkt-Link."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welches Gerät ist typischerweise ein Zwischensystem?",
-    a: [
-      "Router",
-      "Drucker",
-      "Notebook",
-      "Smartphone"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Ein Rechner leitet Daten zwischen zwei Netzwerksegmenten weiter. Welche Rolle kann er dadurch übernehmen?",
+    "a": [
+      "Zwischensystem",
+      "Endsystem",
+      "Nur Serverdienst",
+      "Nur Peripheriegerät"
     ],
-    c: 0,
-    e: "Ein Router vermittelt Daten zwischen unterschiedlichen Netzwerken."
+    "c": 0,
+    "e": "Die Rolle hängt von der konkreten Funktion ab. Durch Weiterleitung zwischen Segmenten kann ein Rechner wie ein Router als Zwischensystem arbeiten."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Warum werden Netzwerke aufgebaut?",
-    a: [
-      "Um Geräte und Ressourcen miteinander zu verbinden und Daten auszutauschen",
-      "Um Computer voneinander zu isolieren",
-      "Um nur lokale Dateien zu speichern",
-      "Um Betriebssysteme zu ersetzen"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Welche Aussage zu Endsystemen und Zwischensystemen trifft zu?",
+    "a": [
+      "Die Rolle ergibt sich aus der Funktion in der jeweiligen Kommunikation.",
+      "Die Bauform entscheidet immer eindeutig über die Rolle.",
+      "Nur Server können Endsysteme sein.",
+      "Ein Gerät kann niemals unterschiedliche Rollen übernehmen."
     ],
-    c: 0,
-    e: "Netzwerke ermöglichen Kommunikation sowie die gemeinsame Nutzung von Daten und Ressourcen."
+    "c": 0,
+    "e": "Die Einordnung richtet sich nach der konkreten Funktion, nicht allein nach der Bauform."
   },
   {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welche Kombination besteht ausschließlich aus typischen Endsystemen?",
-    a: [
-      "PC, Smartphone und Drucker",
-      "Router, Switch und Firewall",
-      "Switch, Access Point und Router",
-      "Firewall, Router und Switch"
+    "cat": "Netzwerk-Grundlagen",
+    "q": "Welche Kombination enthält ausschließlich typische Endsysteme?",
+    "a": [
+      "Notebook, Server, Netzwerkdrucker",
+      "Switch, Router, Notebook",
+      "Router, Access Point, Server",
+      "Repeater, Switch, Drucker"
     ],
-    c: 0,
-    e: "PC, Smartphone und Drucker können als Endsysteme Daten senden und empfangen."
+    "c": 0,
+    "e": "Notebooks, Server und Netzwerkdrucker erzeugen oder konsumieren Daten und sind damit typische Endsysteme."
   },
 
-  // =========================
-  // CLIENT-SERVER & P2P
-  // =========================
-
   {
-    cat: "Client-Server & P2P",
-    q: "Was ist das grundlegende Prinzip einer Client-Server-Architektur?",
-    a: [
-      "Clients greifen auf Dienste eines Servers zu",
-      "Alle Geräte übernehmen immer exakt dieselbe Rolle",
-      "Nur ein Gerät darf Daten senden",
-      "Clients und Server dürfen nicht miteinander kommunizieren"
+    "cat": "Client-Server & P2P",
+    "q": "Welche Rolle hat ein Client in einer Client-Server-Beziehung?",
+    "a": [
+      "Er fordert einen bereitgestellten Dienst an und nutzt ihn.",
+      "Er verwaltet grundsätzlich alle Zugriffsrechte zentral.",
+      "Er ersetzt den Server bei jedem Ausfall automatisch.",
+      "Er übernimmt die Weiterleitung aller Netzwerkpakete."
     ],
-    c: 0,
-    e: "Beim Client-Server-Modell stellt ein Server Dienste bereit, die von Clients genutzt werden."
+    "c": 0,
+    "e": "Ein Client fordert Dienste oder Ressourcen eines Servers an und konsumiert sie."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Welche Aufgabe übernimmt ein Server typischerweise?",
-    a: [
-      "Dienste oder Ressourcen für andere Geräte bereitstellen",
-      "Ausschließlich Tastatureingaben verarbeiten",
-      "Nur Netzwerkkabel verbinden",
-      "Nur IP-Adressen anzeigen"
+    "cat": "Client-Server & P2P",
+    "q": "Was ist ein wesentliches Merkmal des Client-Server-Modells?",
+    "a": [
+      "Dienste und Daten werden zentral bereitgestellt und verwaltet.",
+      "Jeder Teilnehmer verwaltet ausschließlich seine eigenen Daten.",
+      "Alle Teilnehmer haben immer identische Aufgaben.",
+      "Es gibt keine feste Rollenverteilung zwischen den Geräten."
     ],
-    c: 0,
-    e: "Server stellen beispielsweise Dateien, Webseiten oder andere Netzwerkdienste bereit."
+    "c": 0,
+    "e": "Im Client-Server-Modell liegen zentrale Dienste und maßgebliche Daten typischerweise auf Servern."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Welche Aufgabe übernimmt ein Client typischerweise?",
-    a: [
-      "Einen Dienst eines Servers nutzen",
-      "Alle Netzwerkgeräte miteinander verkabeln",
-      "Netzwerkpakete grundsätzlich routen",
-      "Den gesamten Netzwerkverkehr verschlüsseln"
+    "cat": "Client-Server & P2P",
+    "q": "Welche Situation ist ein typisches Beispiel für Client-Server?",
+    "a": [
+      "Viele Notebooks greifen auf einen zentralen Dateiserver zu.",
+      "Mehrere Rechner geben ihre Ordner direkt gegenseitig frei.",
+      "Jedes Gerät speichert nur seine eigene lokale Konfiguration.",
+      "Ein Switch verbindet mehrere Geräte innerhalb eines Segments."
     ],
-    c: 0,
-    e: "Ein Client greift auf einen bereitgestellten Dienst zu."
+    "c": 0,
+    "e": "Viele Clients greifen bei Client-Server auf einen zentral bereitgestellten Dienst wie eine Dateifreigabe zu."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Was kennzeichnet ein Peer-to-Peer-Netzwerk?",
-    a: [
-      "Geräte können direkt miteinander kommunizieren und Ressourcen bereitstellen",
-      "Es gibt zwingend genau einen zentralen Server",
-      "Nur Router dürfen Daten austauschen",
-      "Alle Geräte müssen dieselbe IP-Adresse besitzen"
+    "cat": "Client-Server & P2P",
+    "q": "Welcher Vorteil entsteht durch zentrale Datenhaltung?",
+    "a": [
+      "Datensicherungen lassen sich zentral organisieren.",
+      "Jeder Teilnehmer benötigt einen eigenen Server.",
+      "Ein einzelner Serverausfall betrifft keine Clients.",
+      "Zugriffsrechte müssen auf jedem Client separat gepflegt werden."
     ],
-    c: 0,
-    e: "Bei P2P können Teilnehmer direkt miteinander kommunizieren und sowohl Dienste nutzen als auch bereitstellen."
+    "c": 0,
+    "e": "Zentrale Datenhaltung erleichtert die Datensicherung, weil die maßgeblichen Daten an einer zentralen Stelle liegen."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Was ist ein Vorteil einer Client-Server-Architektur?",
-    a: [
-      "Zentrale Bereitstellung und Verwaltung von Diensten",
-      "Es gibt keinerlei zentrale Verwaltung",
-      "Jeder Client benötigt alle Serverdienste lokal",
-      "Netzwerkgeräte benötigen keine Adressen"
+    "cat": "Client-Server & P2P",
+    "q": "Was ist ein Single Point of Failure im Client-Server-Modell?",
+    "a": [
+      "Ein zentraler Server, dessen Ausfall abhängige Dienste für viele Clients beendet.",
+      "Ein einzelner Client, dessen Ausfall alle anderen Geräte abschaltet.",
+      "Ein zusätzlicher Switch, der nur für redundante Verbindungen eingesetzt wird.",
+      "Ein lokaler Link, der ausschließlich zwei gleichberechtigte Clients verbindet."
     ],
-    c: 0,
-    e: "Die zentrale Struktur erleichtert beispielsweise Verwaltung und Bereitstellung von Ressourcen."
+    "c": 0,
+    "e": "Ein zentraler Server kann zum Single Point of Failure werden, wenn alle Clients von seinen Diensten abhängen."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Was kann ein Nachteil einer stark zentralisierten Client-Server-Struktur sein?",
-    a: [
-      "Der Server kann zu einem zentralen Ausfallpunkt werden",
-      "Clients können keine Dienste nutzen",
-      "Es können keine Benutzer angelegt werden",
-      "Das Netzwerk benötigt grundsätzlich keine Verbindung"
+    "cat": "Client-Server & P2P",
+    "q": "Was kennzeichnet ein Peer-to-Peer-Netzwerk?",
+    "a": [
+      "Teilnehmer können gleichzeitig Ressourcen anbieten und nutzen.",
+      "Ein zentraler Server verwaltet alle Freigaben und Benutzerkonten.",
+      "Alle Daten müssen auf einem einzigen Dateiserver liegen.",
+      "Nur der Administrator darf Ressourcen zwischen den Teilnehmern freigeben."
     ],
-    c: 0,
-    e: "Fällt ein zentraler Server aus, können die von ihm bereitgestellten Dienste betroffen sein."
+    "c": 0,
+    "e": "Bei P2P sind die Teilnehmer grundsätzlich gleichberechtigt und können Anbieter und Nutzer von Ressourcen sein."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Welche Aussage passt zu einem Peer in einem P2P-Netzwerk?",
-    a: [
-      "Ein Teilnehmer kann sowohl Dienste nutzen als auch bereitstellen",
-      "Ein Peer darf niemals Daten empfangen",
-      "Ein Peer ist immer ein Router",
-      "Ein Peer besitzt grundsätzlich keine Netzwerkadresse"
+    "cat": "Client-Server & P2P",
+    "q": "Warum wird P2P bei kleinen Gruppen häufig eingesetzt?",
+    "a": [
+      "Es benötigt keine dedizierte Serverhardware.",
+      "Es bietet immer eine zentrale Sicherheitsstrategie.",
+      "Es skaliert bei Tausenden Teilnehmern ohne zusätzlichen Aufwand.",
+      "Es ersetzt die lokale Verwaltung von Freigaben vollständig."
     ],
-    c: 0,
-    e: "P2P-Teilnehmer können sowohl als Nutzer als auch als Anbieter von Ressourcen auftreten."
+    "c": 0,
+    "e": "P2P kann mit geringem finanziellen und organisatorischen Aufwand ohne dedizierte Serverhardware aufgebaut werden."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Welche Architektur eignet sich besonders für zentral verwaltete Unternehmensdienste?",
-    a: [
-      "Client-Server",
-      "Nur P2P",
-      "Nur eine Punkt-zu-Punkt-Verbindung ohne Server",
-      "Ein Netzwerk ohne Endsysteme"
+    "cat": "Client-Server & P2P",
+    "q": "Welcher Nachteil wird bei P2P mit wachsender Teilnehmerzahl besonders relevant?",
+    "a": [
+      "Die Verwaltung von Freigaben und Rechten wird zunehmend unübersichtlich.",
+      "Ein einzelner zentraler Server wird zum zwingenden Ausfallpunkt.",
+      "Alle Teilnehmer müssen dieselbe Hardware verwenden.",
+      "Die Kommunikation zwischen den Rechnern wird grundsätzlich unmöglich."
     ],
-    c: 0,
-    e: "Zentrale Server erleichtern die Verwaltung von Diensten und Ressourcen in Unternehmen."
+    "c": 0,
+    "e": "Ohne zentrale Verwaltung wird die Koordination bei vielen Teilnehmern zunehmend unübersichtlich."
   },
   {
-    cat: "Client-Server & P2P",
-    q: "Welche Aussage über Client-Server und P2P ist richtig?",
-    a: [
-      "Client-Server trennt Rollen stärker, während P2P Teilnehmer gleichberechtigter behandeln kann",
-      "P2P benötigt immer einen zentralen Server",
-      "Client-Server bedeutet, dass kein Client Daten empfängt",
-      "Beide Modelle sind technisch exakt identisch"
+    "cat": "Client-Server & P2P",
+    "q": "Was unterscheidet strukturierte von unstrukturierten P2P-Netzen?",
+    "a": [
+      "Strukturierte P2P-Netze ermöglichen gezieltere Anfragen über ein festgelegtes Verfahren.",
+      "Strukturierte P2P-Netze benötigen immer einen zentralen Dateiserver.",
+      "Unstrukturierte P2P-Netze speichern alle Ressourcen an einer zentralen Stelle.",
+      "Unstrukturierte P2P-Netze können keine Anfragen zwischen Teilnehmern weiterreichen."
     ],
-    c: 0,
-    e: "Der wesentliche Unterschied liegt in der Rollenverteilung und der Zentralisierung von Diensten."
+    "c": 0,
+    "e": "Strukturierte P2P-Netze organisieren Teilnehmer so, dass Ressourcen gezielter gefunden werden können."
   },
 
-  // =========================
-  // SERVER & NETZWERKTYPEN
-  // =========================
-
   {
-    cat: "Server & Netzwerktypen",
-    q: "Was ist ein Server?",
-    a: [
-      "Ein System, das Dienste oder Ressourcen für andere Systeme bereitstellt",
-      "Ausschließlich ein Netzwerkkabel",
-      "Nur ein Switch-Port",
-      "Ein Gerät ohne Netzwerkfunktion"
+    "cat": "Server & Netzwerktypen",
+    "q": "Nach welchen beiden Kriterien werden Netzwerktypen besonders betrachtet?",
+    "a": [
+      "Größe und räumliche Reichweite",
+      "Anzahl der Benutzer und CPU-Leistung",
+      "Hersteller und Betriebssystem",
+      "Speicherplatz und Anzahl der Anwendungen"
     ],
-    c: 0,
-    e: "Ein Server stellt Netzwerkdienste oder Ressourcen für andere Teilnehmer bereit."
+    "c": 0,
+    "e": "Die Skripte unterscheiden Netzwerktypen vor allem nach Größe und Reichweite."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Wofür steht die Abkürzung LAN?",
-    a: [
-      "Local Area Network",
-      "Large Access Network",
-      "Linked Application Node",
-      "Local Application Number"
+    "cat": "Server & Netzwerktypen",
+    "q": "Welche Umgebung passt am ehesten zu SOHO?",
+    "a": [
+      "Ein kleines Büro mit sechs Personen und einem Kombigerät",
+      "Ein Konzern mit mehreren tausend Arbeitsplätzen",
+      "Ein Rechenzentrum mit tausenden Servern",
+      "Ein Verbund mehrerer Standorte über gemietete Leitungen"
     ],
-    c: 0,
-    e: "LAN steht für Local Area Network und bezeichnet ein lokal begrenztes Netzwerk."
+    "c": 0,
+    "e": "SOHO steht für Small Office/Home Office und umfasst typischerweise etwa ein bis zehn Personen."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Was kennzeichnet ein LAN?",
-    a: [
-      "Es verbindet Geräte in einem räumlich begrenzten Bereich",
-      "Es verbindet ausschließlich Kontinente",
-      "Es besteht nur aus Routern",
-      "Es darf keine Server enthalten"
+    "cat": "Server & Netzwerktypen",
+    "q": "Was ist typisch für ein SME-Netzwerk?",
+    "a": [
+      "Mehrere Dutzend Personen und strukturierte Verkabelung",
+      "Ein einzelner Router für wenige Geräte",
+      "Tausende Server ohne Endnutzer-Clients",
+      "Mehrere Länder, die ausschließlich über ein WAN verbunden sind"
     ],
-    c: 0,
-    e: "Ein LAN ist beispielsweise in einem Gebäude, Büro oder einer Schule zu finden."
+    "c": 0,
+    "e": "SME-Netze unterstützen typischerweise mehrere Dutzend Nutzer und nutzen strukturierte Verkabelung."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Wofür steht WAN?",
-    a: [
-      "Wide Area Network",
-      "Wireless Access Node",
-      "Web Application Network",
-      "Wide Application Number"
+    "cat": "Server & Netzwerktypen",
+    "q": "Welche Beschreibung passt am besten zu einem Enterprise-LAN?",
+    "a": [
+      "Hunderte bis Tausende Geräte mit redundanter Infrastruktur",
+      "Wenige Geräte in einer Wohnung mit einem Kombirouter",
+      "Ausschließlich Server in einem hochverdichteten Rechenzentrum",
+      "Mehrere entfernte LANs, die über einen externen Anbieter verbunden werden"
     ],
-    c: 0,
-    e: "WAN steht für Wide Area Network und bezeichnet ein weitreichendes Netzwerk."
+    "c": 0,
+    "e": "Enterprise-LANs umfassen typischerweise Hunderte bis Tausende Geräte und nutzen redundante Infrastruktur."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Welche Situation beschreibt am ehesten ein WAN?",
-    a: [
-      "Die Verbindung von Netzwerken über große geografische Entfernungen",
-      "Die Verbindung zweier Geräte über ein USB-Kabel",
-      "Ein einzelner Arbeitsplatz-PC",
-      "Ein Drucker innerhalb eines Raumes"
+    "cat": "Server & Netzwerktypen",
+    "q": "Was unterscheidet ein Datacenter-Netzwerk besonders von einem normalen Unternehmens-LAN?",
+    "a": [
+      "Es beherbergt Server und Speichersysteme statt gewöhnlicher Endnutzer-Clients.",
+      "Es besteht ausschließlich aus WLAN-Geräten für Mitarbeitende.",
+      "Es verbindet nur kleine Heimnetzwerke miteinander.",
+      "Es verwendet grundsätzlich nur einen einzigen Switch."
     ],
-    c: 0,
-    e: "WANs verbinden Netzwerke über größere geografische Entfernungen."
+    "c": 0,
+    "e": "Das beschriebene Datacenter-Netzwerk beherbergt Server und Speichersysteme, keine gewöhnlichen Endnutzer-Clients."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Was beschreibt SOHO?",
-    a: [
-      "Small Office / Home Office",
-      "Secure Office Hardware Operation",
-      "Server Online Host Operation",
-      "Small Online Hardware Object"
+    "cat": "Server & Netzwerktypen",
+    "q": "Welche Aussage beschreibt ein WAN korrekt?",
+    "a": [
+      "Es verbindet räumlich getrennte Netzwerke über größere Entfernungen.",
+      "Es beschränkt sich auf einen einzelnen Bürostandort.",
+      "Es besteht nur aus Geräten innerhalb eines Switches.",
+      "Es wird immer vollständig von einer einzigen Organisation betrieben."
     ],
-    c: 0,
-    e: "SOHO steht für Small Office / Home Office und beschreibt kleine Büro- oder Heimarbeitsumgebungen."
+    "c": 0,
+    "e": "Ein WAN verbindet mehrere räumlich getrennte Netzwerke über größere Entfernungen."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Was ist typisch für ein kleines SOHO-Netzwerk?",
-    a: [
-      "Wenige Geräte und eine überschaubare Netzwerkstruktur",
-      "Tausende miteinander verbundene Server",
-      "Nur Rechenzentren",
-      "Ausschließlich WAN-Verbindungen"
+    "cat": "Server & Netzwerktypen",
+    "q": "Warum ist die Betriebsverantwortung für die Unterscheidung von LAN und WAN wichtig?",
+    "a": [
+      "WAN-Strecken werden typischerweise von externen Netzbetreibern bereitgestellt.",
+      "LANs müssen immer über das öffentliche Internet laufen.",
+      "WANs dürfen keine Router enthalten.",
+      "LANs bestehen ausschließlich aus Funkverbindungen."
     ],
-    c: 0,
-    e: "SOHO-Netzwerke sind typischerweise klein und überschaubar."
+    "c": 0,
+    "e": "Bei einem WAN werden verbindende Strecken typischerweise von einem externen Anbieter betrieben."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Was bezeichnet ein Datacenter?",
-    a: [
-      "Eine Umgebung, in der viele IT-Systeme und Server zentral betrieben werden",
-      "Ein einzelner Arbeitsplatz",
-      "Ein spezielles Netzwerkkabel",
-      "Eine WLAN-Frequenz"
+    "cat": "Server & Netzwerktypen",
+    "q": "Welche Entwicklung beschreibt einen typischen Wachstumspfad eines Unternehmens?",
+    "a": [
+      "SOHO → SME → Enterprise-LAN",
+      "WAN → SOHO → PAN",
+      "Datacenter → SOHO → SME",
+      "Enterprise-LAN → PAN → SOHO"
     ],
-    c: 0,
-    e: "In Datacentern werden viele Server- und IT-Systeme konzentriert betrieben."
+    "c": 0,
+    "e": "Das Skript beschreibt SOHO, SME und Enterprise-LAN als idealtypischen Wachstumspfad."
   },
   {
-    cat: "Server & Netzwerktypen",
-    q: "Welche Umgebung ist typischerweise auf eine große Anzahl von Servern und IT-Systemen ausgelegt?",
-    a: [
-      "Datacenter",
-      "SOHO",
-      "Ein einzelner Arbeitsplatz",
-      "Ein privater Druckeranschluss"
+    "cat": "Server & Netzwerktypen",
+    "q": "Welche Umgebung beschreibt ein PAN am besten?",
+    "a": [
+      "Ein Smartphone mit kabellosen Kopfhörern über kurze Distanz",
+      "Mehrere Filialen eines Unternehmens in verschiedenen Ländern",
+      "Mehrere Gebäude auf einem großen Firmengelände",
+      "Mehrere LANs innerhalb einer Stadt"
     ],
-    c: 0,
-    e: "Datacenter sind für den Betrieb vieler IT-Systeme ausgelegt."
-  }
-  // =========================
-  // APPLIANCES & DIENSTE
-  // =========================
-
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Aufgabe hat ein Switch?",
-    a: [
-      "Er verbindet Geräte innerhalb eines Netzwerks und leitet Daten gezielt weiter",
-      "Er vergibt grundsätzlich öffentliche IP-Adressen",
-      "Er verschlüsselt jede Datei auf einem Computer",
-      "Er ersetzt einen Webbrowser"
-    ],
-    c: 0,
-    e: "Ein Switch verbindet Geräte innerhalb eines Netzwerksegments und leitet Frames gezielt an den passenden Anschluss weiter."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Aufgabe hat ein Router?",
-    a: [
-      "Er verbindet unterschiedliche Netzwerke und leitet Pakete zwischen ihnen weiter",
-      "Er arbeitet ausschließlich mit MAC-Adressen innerhalb eines Segments",
-      "Er ersetzt einen Server",
-      "Er speichert automatisch alle Webseiten"
-    ],
-    c: 0,
-    e: "Ein Router verbindet unterschiedliche Netzwerke und übernimmt die Weiterleitung auf Netzwerkebene."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Aufgabe hat eine Firewall?",
-    a: [
-      "Sie kontrolliert und filtert Netzwerkverkehr nach festgelegten Regeln",
-      "Sie ersetzt jedes Netzwerkkabel",
-      "Sie vergibt automatisch alle MAC-Adressen",
-      "Sie dient ausschließlich zum Drucken"
-    ],
-    c: 0,
-    e: "Eine Firewall kontrolliert Netzwerkverkehr und kann ihn abhängig von Regeln erlauben oder blockieren."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Aufgabe hat DHCP?",
-    a: [
-      "Netzwerkgeräte automatisch mit Netzwerkkonfigurationen versorgen",
-      "Webseiten verschlüsseln",
-      "MAC-Adressen in Ethernet-Frames speichern",
-      "Dateien komprimieren"
-    ],
-    c: 0,
-    e: "DHCP kann Geräten automatisch Netzwerkparameter wie eine IP-Adresse zuweisen."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Aufgabe hat DNS?",
-    a: [
-      "Namen in Netzwerkadressen bzw. IP-Adressen auflösen",
-      "Netzwerkkabel testen",
-      "Daten ausschließlich verschlüsseln",
-      "Frames innerhalb eines Switches sortieren"
-    ],
-    c: 0,
-    e: "DNS ermöglicht beispielsweise die Auflösung eines Hostnamens in eine IP-Adresse."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Wofür wird ein VPN eingesetzt?",
-    a: [
-      "Für eine geschützte bzw. logisch private Verbindung über ein fremdes Netzwerk",
-      "Zum Ersetzen einer Netzwerkkarte",
-      "Zum Erstellen von MAC-Adressen",
-      "Zum direkten Anschließen eines Monitors"
-    ],
-    c: 0,
-    e: "Ein VPN kann eine geschützte Verbindung über ein nicht vertrauenswürdiges oder öffentliches Netzwerk ermöglichen."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Was beschreibt QoS im Netzwerkbereich?",
-    a: [
-      "Quality of Service – die gezielte Behandlung bzw. Priorisierung bestimmter Datenströme",
-      "Quick Online Server",
-      "Query Operating System",
-      "Quality of Storage"
-    ],
-    c: 0,
-    e: "QoS steht für Quality of Service und kann dazu genutzt werden, bestimmten Datenverkehr bevorzugt zu behandeln."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welches Gerät arbeitet typischerweise auf der Datenübertragungsebene und verwendet MAC-Adressen zur Weiterleitung?",
-    a: [
-      "Switch",
-      "Router",
-      "DNS-Server",
-      "DHCP-Server"
-    ],
-    c: 0,
-    e: "Ein Switch arbeitet auf Layer 2 und nutzt MAC-Adressen für die lokale Weiterleitung."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welches Gerät ist typisch für die Verbindung unterschiedlicher IP-Netzwerke?",
-    a: [
-      "Router",
-      "Switch",
-      "Access Point",
-      "Patchpanel"
-    ],
-    c: 0,
-    e: "Router übernehmen die Weiterleitung zwischen unterschiedlichen Netzwerken auf Layer 3."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Welche Kombination enthält ausschließlich typische Netzwerkdienste?",
-    a: [
-      "DHCP und DNS",
-      "Switch und Router",
-      "Firewall und Switch",
-      "Router und Access Point"
-    ],
-    c: 0,
-    e: "DHCP und DNS sind Netzwerkdienste. Switch, Router und Firewall sind Netzwerkgeräte bzw. Appliances."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Ein Gerät soll automatisch eine IP-Konfiguration erhalten. Welcher Dienst ist dafür besonders relevant?",
-    a: [
-      "DHCP",
-      "DNS",
-      "HTTP",
-      "QoS"
-    ],
-    c: 0,
-    e: "DHCP stellt Netzwerkgeräten automatisch Konfigurationsinformationen bereit."
-  },
-  {
-    cat: "Appliances & Dienste",
-    q: "Ein Benutzer gibt einen Hostnamen ein und möchte die zugehörige IP-Adresse ermitteln. Welcher Dienst wird dafür verwendet?",
-    a: [
-      "DNS",
-      "DHCP",
-      "VPN",
-      "QoS"
-    ],
-    c: 0,
-    e: "DNS übernimmt die Namensauflösung und kann Hostnamen in IP-Adressen auflösen."
+    "c": 0,
+    "e": "Ein PAN umfasst nur wenige Meter und verbindet typischerweise ein Gerät mit direkt zugehörigem Zubehör."
   },
 
-  // =========================
-  // OSI-GRUNDLAGEN
-  // =========================
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Was ist eine Netzwerk-Appliance?",
+    "a": [
+      "Ein Computer mit eigenem Betriebssystem und einer spezialisierten Netzwerkrolle",
+      "Ein beliebiges Benutzerprogramm ohne Netzwerkfunktion",
+      "Eine reine Kabelverbindung zwischen zwei Endgeräten",
+      "Eine gespeicherte Datei mit Netzwerkkonfigurationen"
+    ],
+    "c": 0,
+    "e": "Eine Appliance ist ein spezialisierter Computer mit eigenem Betriebssystem und eigener Software."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Was unterscheidet eine virtuelle Appliance von einer physischen Appliance?",
+    "a": [
+      "Sie läuft als Softwareinstanz auf gemeinsam genutzter Hardware.",
+      "Sie benötigt grundsätzlich keine Netzwerkschnittstelle.",
+      "Sie kann ausschließlich als einzelnes Hardwaregerät betrieben werden.",
+      "Sie arbeitet nur auf einem Smartphone mit lokalem Speicher."
+    ],
+    "c": 0,
+    "e": "Eine virtuelle Appliance erfüllt die Funktion als Software, typischerweise als virtuelle Maschine auf einem Hypervisor."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Hauptaufgabe hat ein Switch?",
+    "a": [
+      "Er verbindet Geräte im selben Segment und leitet anhand von Hardwareadressen weiter.",
+      "Er verbindet verschiedene Netzwerke und entscheidet anhand einer Routingtabelle.",
+      "Er verschlüsselt automatisch jede Verbindung über das Internet.",
+      "Er verteilt Anfragen auf mehrere gleichwertige Server."
+    ],
+    "c": 0,
+    "e": "Ein Switch arbeitet innerhalb eines Segments und leitet Frames anhand physischer Hardwareadressen weiter."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Aufgabe hat ein Router?",
+    "a": [
+      "Er verbindet unterschiedliche Netzwerke und leitet anhand von Netzwerkadressen weiter.",
+      "Er verteilt WLAN-Signale ausschließlich innerhalb eines einzelnen Raums.",
+      "Er prüft ausschließlich Dateiinhalte auf Schadsoftware.",
+      "Er speichert zentrale Projektdokumente für alle Benutzer."
+    ],
+    "c": 0,
+    "e": "Ein Router verbindet unterschiedliche Netzwerke und nutzt Netzwerkadressen sowie Routinginformationen."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Aufgabe übernimmt eine Firewall?",
+    "a": [
+      "Sie überwacht und filtert Datenverkehr anhand festgelegter Regeln.",
+      "Sie verteilt Daten automatisch auf alle Ports eines Switches.",
+      "Sie ersetzt jeden Router in einem Unternehmensnetzwerk.",
+      "Sie wandelt Webseiten in Netzwerkadressen um."
+    ],
+    "c": 0,
+    "e": "Eine Firewall kontrolliert Datenverkehr anhand von Regeln und wird häufig an Netzwerkgrenzen eingesetzt."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Wann ist ein Load Balancer besonders sinnvoll?",
+    "a": [
+      "Wenn Anfragen auf mehrere gleichwertige Server verteilt werden sollen.",
+      "Wenn ein einzelnes Notebook erstmals eine Netzwerkadresse benötigt.",
+      "Wenn zwei Geräte über ein Kabel direkt verbunden werden.",
+      "Wenn ein WLAN-Signal in ein elektrisches Signal umgewandelt wird."
+    ],
+    "c": 0,
+    "e": "Ein Load Balancer verteilt eingehende Anfragen auf mehrere gleichwertige Server."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Aufgabe passt zu einem vorwärtsgerichteten Proxy?",
+    "a": [
+      "Er vermittelt den Internetzugriff von Clients und kann ihn filtern oder protokollieren.",
+      "Er verbindet mehrere Teilnetze anhand einer Routingtabelle.",
+      "Er stellt ausschließlich WLAN für mobile Geräte bereit.",
+      "Er verteilt Anfragen auf mehrere Backend-Server."
+    ],
+    "c": 0,
+    "e": "Ein Forward Proxy steht auf Clientseite und kann Internetzugriffe zentral filtern, protokollieren oder zwischenspeichern."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Funktion hat ein Wireless Access Point?",
+    "a": [
+      "Er vermittelt zwischen drahtlosen Endgeräten und dem verkabelten Netzwerk.",
+      "Er entscheidet anhand von IP-Adressen über Routen zwischen Netzen.",
+      "Er speichert zentrale Dateien für mehrere Clients.",
+      "Er verteilt Webanfragen auf eine Gruppe von Servern."
+    ],
+    "c": 0,
+    "e": "Ein Access Point verbindet drahtlose Endgeräte mit dem bestehenden verkabelten Netzwerk."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Aufgabe erfüllt ein VPN?",
+    "a": [
+      "Es ermöglicht einen verschlüsselten Zugang über ein öffentliches Netz zu einem internen Netzwerk.",
+      "Es verteilt Datenpakete auf mehrere Server nach ihrer aktuellen Auslastung.",
+      "Es weist jedem Gerät automatisch eine Netzwerkadresse zu.",
+      "Es ersetzt die Hardwareadresse eines Geräts durch eine Portnummer."
+    ],
+    "c": 0,
+    "e": "Ein VPN ermöglicht eine verschlüsselte Verbindung über ein öffentliches Netz zu einem internen Netzwerk."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Wozu dient Quality of Service?",
+    "a": [
+      "Zeitkritische Datenströme können bei Engpässen bevorzugt behandelt werden.",
+      "Alle Netzwerkdaten werden unabhängig von ihrer Bedeutung gleich verzögert.",
+      "Jedes Gerät erhält dadurch automatisch einen eigenen Server.",
+      "Die Funktion ersetzt die Adressierung auf der Netzwerkschicht."
+    ],
+    "c": 0,
+    "e": "QoS kann zeitkritischen Datenverkehr, etwa Sprache oder Video, bei Engpässen bevorzugen."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welcher Dienst übersetzt für Menschen lesbare Namen in numerische Netzwerkadressen?",
+    "a": [
+      "Ein Namensauflösungsdienst",
+      "Ein Zeitsynchronisationsdienst",
+      "Ein Lastverteilungsdienst",
+      "Ein Datensicherungsdienst"
+    ],
+    "c": 0,
+    "e": "Der Namensauflösungsdienst übersetzt lesbare Namen in numerische Adressen."
+  },
+  {
+    "cat": "Appliances & Dienste",
+    "q": "Welche Aufgabe hat ein Dienst zur dynamischen Host-Konfiguration?",
+    "a": [
+      "Er weist Geräten automatisch eine Netzwerkadresse und weitere Parameter zu.",
+      "Er verteilt Webanfragen auf mehrere Server.",
+      "Er filtert Datenverkehr anhand von Firewall-Regeln.",
+      "Er synchronisiert die Uhren aller Netzwerkgeräte."
+    ],
+    "c": 0,
+    "e": "Der Dienst weist neu angeschlossenen Geräten automatisch Netzwerkadressen und weitere Konfigurationsparameter zu."
+  },
 
   {
-    cat: "OSI-Grundlagen",
-    q: "Wie viele Schichten besitzt das OSI-Modell?",
-    a: [
-      "7",
-      "4",
-      "5",
-      "8"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Reihenfolge der OSI-Schichten ist von unten nach oben korrekt?",
+    "a": [
+      "Physical, Data Link, Network, Transport, Session, Presentation, Application",
+      "Application, Presentation, Session, Transport, Network, Data Link, Physical",
+      "Physical, Network, Data Link, Transport, Application, Session, Presentation",
+      "Data Link, Physical, Network, Transport, Presentation, Session, Application"
     ],
-    c: 0,
-    e: "Das OSI-Referenzmodell besteht aus sieben Schichten."
+    "c": 0,
+    "e": "Die sieben Schichten beginnen bei Physical und enden bei Application."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Schicht ist die unterste Schicht des OSI-Modells?",
-    a: [
-      "Layer 1 – Physical",
-      "Layer 2 – Data Link",
-      "Layer 3 – Network",
-      "Layer 7 – Application"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Kernaufgabe gehört zur Physical-Schicht?",
+    "a": [
+      "Übertragung von Bits als physisches Signal",
+      "Logische Adressierung zwischen Netzwerken",
+      "Aufbau und Verwaltung von Sitzungen",
+      "Bereitstellung von Anwendungen für Benutzer"
     ],
-    c: 0,
-    e: "Layer 1 ist die Physical Layer und beschreibt die physische Übertragung von Bits."
+    "c": 0,
+    "e": "Schicht 1 ist für die physische Übertragung von Bits als Signal zuständig."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe hat OSI Layer 1?",
-    a: [
-      "Übertragung von Bits als physikalische Signale",
-      "Routing zwischen Netzwerken",
-      "Adressierung mit Ports",
-      "Bereitstellung von Webanwendungen"
-    ],
-    c: 0,
-    e: "Die Physical Layer beschäftigt sich mit der Übertragung von Bits als physische Signale."
-  },
-  {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe gehört zu OSI Layer 2?",
-    a: [
-      "Lokale Adressierung und Weiterleitung innerhalb eines Netzwerksegments",
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aufgabe gehört zur Data-Link-Schicht?",
+    "a": [
+      "Lokale Adressierung und Weiterleitung innerhalb eines Segments",
       "Routing zwischen verschiedenen Netzwerken",
-      "Verschlüsselung von Anwendungen",
-      "Verwaltung von Sitzungen"
+      "Verwaltung von Dialogen zwischen Anwendungen",
+      "Formatumwandlung und Kompression von Daten"
     ],
-    c: 0,
-    e: "Layer 2 übernimmt unter anderem lokale Adressierung und die Weiterleitung innerhalb eines Segments."
+    "c": 0,
+    "e": "Schicht 2 übernimmt lokale Adressierung und Weiterleitung im Segment."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe gehört zu OSI Layer 3?",
-    a: [
-      "Logische Adressierung und Routing",
-      "Übertragung einzelner Bits",
-      "Verwaltung von Sitzungen",
-      "Darstellung und Kompression von Daten"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aufgabe gehört zur Network-Schicht?",
+    "a": [
+      "Logische Adressierung und Routing zwischen Netzen",
+      "Übertragung einzelner Bits über ein Medium",
+      "Aufbau einer Sitzung zwischen Anwendungen",
+      "Formatierung der Nutzdaten für eine Anwendung"
     ],
-    c: 0,
-    e: "Die Network Layer übernimmt logische Adressierung und Routing."
+    "c": 0,
+    "e": "Schicht 3 ist für logische Adressierung und Routing zwischen Netzwerken zuständig."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe gehört zu OSI Layer 4?",
-    a: [
-      "Ende-zu-Ende-Übertragung und Portadressierung",
-      "Physische Übertragung",
-      "Lokale MAC-Adressierung",
-      "Darstellung von Datenformaten"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aufgabe gehört zur Transport-Schicht?",
+    "a": [
+      "Ende-zu-Ende-Zustellung, Portadressierung und Zuverlässigkeit",
+      "Übertragung von Signalen über Kupfer oder Glasfaser",
+      "Lokale Weiterleitung anhand von Hardwareadressen",
+      "Darstellung und Kompression von Anwendungsdaten"
     ],
-    c: 0,
-    e: "Die Transport Layer ermöglicht Ende-zu-Ende-Kommunikation und verwendet Portnummern."
+    "c": 0,
+    "e": "Schicht 4 übernimmt Ende-zu-Ende-Zustellung, Portadressierung und Zuverlässigkeitsfunktionen."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe hat die Session Layer?",
-    a: [
-      "Sitzungen zwischen Kommunikationspartnern aufbauen und verwalten",
-      "Bits über ein Kabel übertragen",
-      "IP-Pakete routen",
-      "MAC-Adressen verwalten"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aufgabe ist typisch für die Session-Schicht?",
+    "a": [
+      "Aufbau, Abbau und Verwaltung von Sitzungen",
+      "Routing anhand logischer Netzwerkadressen",
+      "Weiterleitung von Frames innerhalb eines Segments",
+      "Übertragung von Bits als physisches Signal"
     ],
-    c: 0,
-    e: "Layer 5 beschäftigt sich mit dem Aufbau und der Verwaltung von Sitzungen."
+    "c": 0,
+    "e": "Schicht 5 verwaltet Sitzungen beziehungsweise Dialoge."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe hat die Presentation Layer?",
-    a: [
-      "Datenformatumwandlung, Kompression und Verschlüsselung",
-      "Routing von IP-Paketen",
-      "Weiterleitung von Ethernet-Frames",
-      "Vergabe von IP-Adressen"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Funktion gehört zur Presentation-Schicht?",
+    "a": [
+      "Formatumwandlung, Kompression und Verschlüsselung",
+      "Routing zwischen verschiedenen Netzwerksegmenten",
+      "Weiterleitung anhand von MAC-Adressen",
+      "Vergabe von Portnummern für Anwendungen"
     ],
-    c: 0,
-    e: "Layer 6 kümmert sich unter anderem um Darstellung, Formatumwandlung, Kompression und Verschlüsselung."
+    "c": 0,
+    "e": "Schicht 6 behandelt unter anderem Formatumwandlung, Kompression und Verschlüsselung."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Aufgabe hat die Application Layer?",
-    a: [
-      "Schnittstelle für Anwendungen und Netzwerkdienste",
-      "Übertragung von Bits",
-      "Routing zwischen Routern",
-      "Weiterleitung anhand von MAC-Adressen"
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aufgabe hat die Application-Schicht?",
+    "a": [
+      "Sie stellt die Schnittstelle zu Netzwerkdiensten für Anwendungen bereit.",
+      "Sie überträgt elektrische Signale auf dem Übertragungsmedium.",
+      "Sie entscheidet über den besten Routerpfad zwischen Netzen.",
+      "Sie leitet Frames anhand von Hardwareadressen weiter."
     ],
-    c: 0,
-    e: "Layer 7 stellt Funktionen für Anwendungen bereit, beispielsweise im Umfeld von Web, Mail oder Verzeichnisdiensten."
+    "c": 0,
+    "e": "Schicht 7 stellt die Schnittstelle für Anwendungen wie Web oder Mail bereit."
   },
   {
-    cat: "OSI-Grundlagen",
-    q: "Welche Zuordnung ist korrekt?",
-    a: [
-      "Layer 3 = Network Layer",
-      "Layer 3 = Physical Layer",
-      "Layer 3 = Application Layer",
-      "Layer 3 = Session Layer"
+    "cat": "OSI-Grundlagen",
+    "q": "Warum ist das OSI-Modell für die Fehlersuche hilfreich?",
+    "a": [
+      "Probleme lassen sich gezielt einzelnen Funktionsschichten zuordnen.",
+      "Es schreibt für jedes Netzwerkgerät eine konkrete Hardware vor.",
+      "Es ersetzt alle technischen Netzwerkstandards durch sieben Protokolle.",
+      "Es sorgt dafür, dass jedes Netzwerk genau sieben Geräte benötigt."
     ],
-    c: 0,
-    e: "Layer 3 des OSI-Modells ist die Network Layer."
+    "c": 0,
+    "e": "Das Modell unterstützt eine schichtweise Fehlersuche, bei der Probleme gezielt eingegrenzt werden."
+  },
+  {
+    "cat": "OSI-Grundlagen",
+    "q": "Welche Aussage beschreibt das OSI-Modell korrekt?",
+    "a": [
+      "Es ist ein funktionales Referenzmodell und keine konkrete Protokollsuite.",
+      "Es ist eine Sammlung konkreter Kabel- und Steckerstandards.",
+      "Es schreibt die genaue Hardware jedes Routers verbindlich vor.",
+      "Es ist identisch mit der praktisch eingesetzten TCP/IP-Protokollsuite."
+    ],
+    "c": 0,
+    "e": "OSI beschreibt Funktionen in sieben Schichten und dient als Referenzmodell."
   },
 
-  // =========================
-  // KAPSELUNG & PDU
-  // =========================
-
   {
-    cat: "Kapselung & PDU",
-    q: "Was bedeutet Kapselung im Netzwerk?",
-    a: [
-      "Jede Schicht ergänzt die Daten um für sie relevante Informationen",
-      "Alle Netzwerkdaten werden gelöscht",
-      "Nur die Anwendung darf Daten verändern",
-      "Ein Router entfernt grundsätzlich alle Header"
-    ],
-    c: 0,
-    e: "Bei der Kapselung werden beim Durchlaufen der Schichten zusätzliche Informationen wie Header hinzugefügt."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Was passiert bei der Entkapselung?",
-    a: [
-      "Die empfangende Seite verarbeitet und entfernt schichtweise die jeweiligen Informationen",
-      "Die Daten werden erneut zufällig gemischt",
-      "Alle Daten werden verworfen",
-      "Der Sender erhält eine neue MAC-Adresse"
-    ],
-    c: 0,
-    e: "Bei der Entkapselung werden die Informationen der einzelnen Schichten schrittweise interpretiert und entfernt."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Wie heißt die PDU der Transportschicht bei TCP?",
-    a: [
-      "Segment",
-      "Frame",
-      "Packet",
-      "Bit"
-    ],
-    c: 0,
-    e: "Bei TCP wird die PDU der Transportschicht als Segment bezeichnet."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Wie wird die PDU der Netzwerkschicht typischerweise bezeichnet?",
-    a: [
-      "Packet bzw. Datagram",
-      "Frame",
-      "Segment",
-      "Bit"
-    ],
-    c: 0,
-    e: "Auf Layer 3 wird die PDU als Packet bzw. Datagram bezeichnet."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Wie heißt die PDU der Data-Link-Schicht?",
-    a: [
-      "Frame",
-      "Segment",
-      "Packet",
-      "Bit"
-    ],
-    c: 0,
-    e: "Die PDU der Data-Link-Schicht ist ein Frame."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Was wird auf der Physical Layer übertragen?",
-    a: [
-      "Bits als physische Signale",
-      "Frames als logische Einheiten",
-      "IP-Adressen als Dateien",
-      "TCP-Segmente als Anwendungen"
-    ],
-    c: 0,
-    e: "Auf der Physical Layer werden Bits in Form physischer Signale übertragen."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Welche Bestandteile kann eine PDU enthalten?",
-    a: [
-      "Header, Nutzlast und teilweise Trailer",
-      "Nur einen Header",
-      "Nur eine IP-Adresse",
-      "Nur einen Port"
-    ],
-    c: 0,
-    e: "PDUs können aus Header, Payload/Nutzlast und je nach Protokoll zusätzlich einem Trailer bestehen."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Welche Reihenfolge beschreibt die Kapselung vom Anwendungsprogramm bis zur Übertragung?",
-    a: [
-      "Daten → TCP-Segment → IP-Paket → Ethernet-Frame → Bits",
+    "cat": "Kapselung & PDU",
+    "q": "Welche Reihenfolge beschreibt die Kapselung von oben nach unten korrekt?",
+    "a": [
+      "Daten → Segment → Paket → Frame → Bits",
       "Bits → Frame → Paket → Segment → Daten",
-      "Frame → Bits → Daten → Paket → Segment",
-      "IP-Paket → Daten → Frame → Bits → Segment"
+      "Daten → Paket → Segment → Bits → Frame",
+      "Segment → Daten → Frame → Paket → Bits"
     ],
-    c: 0,
-    e: "Bei der Kapselung werden die Anwendungsdaten schrittweise um die Informationen der unteren Schichten ergänzt."
+    "c": 0,
+    "e": "Beim Senden wird aus Daten ein Segment, daraus ein Paket, daraus ein Frame und schließlich eine Bitfolge."
   },
   {
-    cat: "Kapselung & PDU",
-    q: "Welche Reihenfolge beschreibt die Entkapselung beim Empfänger?",
-    a: [
-      "Bits → Ethernet-Frame → IP-Paket → TCP-Segment → Anwendungsdaten",
-      "Anwendungsdaten → TCP-Segment → IP-Paket → Frame → Bits",
-      "IP-Paket → Bits → Frame → Daten → Segment",
-      "Frame → Anwendung → Bits → Segment → Paket"
+    "cat": "Kapselung & PDU",
+    "q": "Welche PDU gehört zur Transportschicht bei TCP?",
+    "a": [
+      "Segment",
+      "Frame",
+      "Paket",
+      "Bits"
     ],
-    c: 0,
-    e: "Der Empfänger verarbeitet die Daten von den unteren Schichten nach oben und entfernt dabei die jeweiligen Header."
-  }
-  // =========================
-  // ADRESSIERUNG & GERÄTE
-  // =========================
-
-  {
-    cat: "Adressierung & Geräte",
-    q: "Wofür wird eine MAC-Adresse hauptsächlich verwendet?",
-    a: [
-      "Zur lokalen Adressierung innerhalb eines Netzwerksegments",
-      "Zum Routing über das Internet",
-      "Zur Identifikation einer Anwendung",
-      "Zur Verschlüsselung von Webseiten"
-    ],
-    c: 0,
-    e: "MAC-Adressen werden für die lokale Kommunikation innerhalb eines Netzwerksegments verwendet."
+    "c": 0,
+    "e": "Ein TCP-Datenblock auf der Transportschicht wird als Segment bezeichnet."
   },
   {
-    cat: "Adressierung & Geräte",
-    q: "Wofür wird eine IP-Adresse hauptsächlich verwendet?",
-    a: [
-      "Zur logischen Adressierung und zur Weiterleitung zwischen Netzwerken",
-      "Nur zur Identifikation einer Netzwerkkarte innerhalb eines Frames",
-      "Zur Darstellung von Webseiten",
-      "Zur Verschlüsselung von Passwörtern"
-    ],
-    c: 0,
-    e: "IP-Adressen dienen der logischen Adressierung und ermöglichen die Weiterleitung von Paketen zwischen Netzwerken."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Auf welcher OSI-Schicht ist die MAC-Adressierung hauptsächlich angesiedelt?",
-    a: [
-      "Layer 2 – Data Link",
-      "Layer 1 – Physical",
-      "Layer 3 – Network",
-      "Layer 7 – Application"
-    ],
-    c: 0,
-    e: "MAC-Adressen gehören zur Data-Link-Schicht, also Layer 2."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Auf welcher OSI-Schicht ist die IP-Adressierung hauptsächlich angesiedelt?",
-    a: [
-      "Layer 3 – Network",
-      "Layer 1 – Physical",
-      "Layer 2 – Data Link",
-      "Layer 6 – Presentation"
-    ],
-    c: 0,
-    e: "IP-Adressen gehören zur Network Layer, also Layer 3."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Was passiert mit der MAC-Adresse bei der Weiterleitung über einen Router?",
-    a: [
-      "Die MAC-Adressen des jeweiligen lokalen Segments können sich ändern",
-      "Die MAC-Adresse bleibt über alle Netzwerke immer identisch",
-      "Die IP-Adresse wird durch die MAC-Adresse ersetzt",
-      "Alle MAC-Adressen werden gelöscht"
-    ],
-    c: 0,
-    e: "Bei der Weiterleitung über Router wird auf jedem lokalen Segment eine passende MAC-Adressierung verwendet."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Welche Adresse bleibt im beschriebenen Modell bei einer Kommunikation über mehrere Netzwerke grundsätzlich gleich?",
-    a: [
-      "Die IP-Adresse des Endpunkts",
-      "Die MAC-Adresse des ersten Switches",
-      "Die MAC-Adresse des ersten Routers",
-      "Die Portnummer des Switches"
-    ],
-    c: 0,
-    e: "Im beschriebenen Modell bleibt die IP-Adressierung für die Endpunkte über den Weg grundsätzlich bestehen, während sich die lokale MAC-Adressierung ändern kann."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Welche Aufgabe hat ein Switch im Zusammenhang mit MAC-Adressen?",
-    a: [
-      "Er verwendet MAC-Adressen, um Frames innerhalb eines Segments gezielt weiterzuleiten",
-      "Er verwendet ausschließlich DNS-Namen",
-      "Er vergibt öffentliche IP-Adressen",
-      "Er verschlüsselt automatisch jede Anwendung"
-    ],
-    c: 0,
-    e: "Ein Switch nutzt MAC-Adressen zur Weiterleitung von Frames innerhalb eines lokalen Netzwerks."
-  },
-  {
-    cat: "Adressierung & Geräte",
-    q: "Welche Aufgabe hat ein Router im Zusammenhang mit IP-Adressen?",
-    a: [
-      "Er nutzt logische Adressen zur Weiterleitung von Paketen zwischen Netzwerken",
-      "Er nutzt ausschließlich MAC-Adressen für Routing zwischen Netzwerken",
-      "Er ersetzt IP-Adressen durch Portnummern",
-      "Er verarbeitet nur physische Signale"
-    ],
-    c: 0,
-    e: "Router arbeiten auf Layer 3 und verwenden logische Adressierung für die Weiterleitung zwischen Netzwerken."
-  },
-
-  // =========================
-  // PRAXIS & PROTOKOLLE
-  // =========================
-
-  {
-    cat: "Praxis & Protokolle",
-    q: "Was passiert vereinfacht, wenn ein Benutzer eine Webseite über einen Hostnamen aufruft?",
-    a: [
-      "Zunächst kann der Hostname über DNS in eine IP-Adresse aufgelöst werden",
-      "Der Hostname wird direkt in eine MAC-Adresse umgewandelt",
-      "Der Browser sendet grundsätzlich nur Bits ohne weitere Informationen",
-      "Der Switch übernimmt die DNS-Auflösung"
-    ],
-    c: 0,
-    e: "DNS kann den eingegebenen Hostnamen in die benötigte IP-Adresse auflösen."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Aufgabe hat HTTP?",
-    a: [
-      "Es dient der Kommunikation zwischen Webbrowser und Webserver",
-      "Es vergibt IP-Adressen",
-      "Es ersetzt Ethernet",
-      "Es übernimmt das Routing zwischen Netzwerken"
-    ],
-    c: 0,
-    e: "HTTP ist ein Protokoll für die Kommunikation im Web, beispielsweise zwischen Browser und Webserver."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Aussage beschreibt HTTPS am besten?",
-    a: [
-      "Es ermöglicht die geschützte Kommunikation zwischen Webbrowser und Webserver",
-      "Es ist ausschließlich ein Routingprotokoll",
-      "Es ersetzt DNS vollständig",
-      "Es arbeitet ausschließlich auf Layer 1"
-    ],
-    c: 0,
-    e: "HTTPS wird für geschützte Kommunikation im Web verwendet."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Aufgabe hat DNS beim Aufruf einer Webseite?",
-    a: [
-      "Den Namen des Zielsystems in eine IP-Adresse auflösen",
-      "Das Ethernet-Kabel aktivieren",
-      "Den Bildschirm des Benutzers ansteuern",
-      "Die Tastatureingaben verschlüsseln"
-    ],
-    c: 0,
-    e: "DNS übernimmt die Namensauflösung, damit das Zielsystem anhand seiner IP-Adresse erreicht werden kann."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Aussage beschreibt TCP korrekt?",
-    a: [
-      "TCP ist ein Transportprotokoll",
-      "TCP ist ein Protokoll der Physical Layer",
-      "TCP ist ausschließlich ein DNS-Protokoll",
-      "TCP ist ein Ethernet-Frame"
-    ],
-    c: 0,
-    e: "TCP gehört zur Transportschicht und ermöglicht Transportkommunikation zwischen Endpunkten."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Rolle spielen Ports bei der Transportkommunikation?",
-    a: [
-      "Sie ermöglichen die Zuordnung von Daten zu Anwendungen bzw. Diensten",
-      "Sie ersetzen die IP-Adresse",
-      "Sie bestimmen ausschließlich das Netzwerkkabel",
-      "Sie dienen nur zur MAC-Adressierung"
-    ],
-    c: 0,
-    e: "Portnummern helfen dabei, Daten innerhalb eines Systems der passenden Anwendung bzw. dem passenden Dienst zuzuordnen."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Schicht ist für Portadressierung zuständig?",
-    a: [
-      "Layer 4 – Transport",
-      "Layer 2 – Data Link",
-      "Layer 3 – Network",
-      "Layer 7 – Application"
-    ],
-    c: 0,
-    e: "Portadressierung gehört zur Transportschicht, also Layer 4."
-  },
-  {
-    cat: "Praxis & Protokolle",
-    q: "Welche Reihenfolge passt zu einem vereinfachten Webseitenaufruf?",
-    a: [
-      "Name auflösen → Ziel-IP ermitteln → Transport- und Netzwerkkommunikation → Webdaten übertragen",
-      "MAC-Adresse löschen → Monitor einschalten → DNS deaktivieren",
-      "IP-Adresse durch einen Dateinamen ersetzen → Kabel entfernen → Webseite anzeigen",
-      "Nur Layer 1 verwenden → Anwendung direkt ausführen"
-    ],
-    c: 0,
-    e: "Beim Webseitenaufruf spielen unter anderem Namensauflösung, IP-Kommunikation, Transportkommunikation und die Webanwendung zusammen."
-  },
-
-  // =========================
-  // TCP/IP & OSI
-  // =========================
-
-  {
-    cat: "TCP/IP & OSI",
-    q: "Wie viele Schichten hat das TCP/IP-Modell in der hier verwendeten Darstellung?",
-    a: [
-      "4",
-      "7",
-      "5",
-      "3"
-    ],
-    c: 0,
-    e: "Das TCP/IP-Modell wird hier mit vier Schichten dargestellt."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht entspricht der OSI-Transportschicht?",
-    a: [
-      "Transport",
-      "Internet",
-      "Link",
-      "Application"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Transportschicht entspricht der OSI-Schicht 4."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht entspricht der OSI-Network-Layer?",
-    a: [
-      "Internet",
-      "Transport",
-      "Application",
-      "Link"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Internet-Schicht entspricht der OSI-Network-Layer."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht fasst OSI Layer 1 und Layer 2 zusammen?",
-    a: [
-      "Link",
-      "Internet",
-      "Transport",
-      "Application"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Link-Schicht fasst die Funktionen von OSI Layer 1 und Layer 2 zusammen."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht fasst OSI Layer 5 bis 7 zusammen?",
-    a: [
-      "Application",
-      "Transport",
-      "Internet",
-      "Link"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Application-Schicht fasst die oberen OSI-Schichten 5, 6 und 7 zusammen."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche Zuordnung ist richtig?",
-    a: [
-      "TCP/IP Application = OSI Layer 5, 6 und 7",
-      "TCP/IP Application = OSI Layer 1 und 2",
-      "TCP/IP Transport = OSI Layer 1",
-      "TCP/IP Link = OSI Layer 7"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Application-Schicht bündelt die Funktionen der OSI-Schichten 5 bis 7."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Was ist das OSI-Modell hauptsächlich?",
-    a: [
-      "Ein konzeptionelles Referenzmodell zur Beschreibung von Netzwerkkommunikation",
-      "Ein einzelnes Netzwerkprotokoll",
-      "Ein Betriebssystem",
-      "Ein physisches Netzwerkgerät"
-    ],
-    c: 0,
-    e: "OSI dient als Referenzmodell, mit dem Netzwerkkommunikation strukturiert und beschrieben werden kann."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Was ist TCP/IP im Vergleich zum OSI-Modell?",
-    a: [
-      "Eine praktisch eingesetzte Protokollfamilie bzw. ein Protokollstapel",
-      "Nur ein theoretisches Diagramm ohne Protokolle",
-      "Ein einzelner Switch",
-      "Eine Verschlüsselungsmethode"
-    ],
-    c: 0,
-    e: "TCP/IP beschreibt eine praktisch eingesetzte Protokollfamilie und deren Schichten."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche Aussage über OSI und TCP/IP ist richtig?",
-    a: [
-      "OSI dient vor allem als Referenzmodell, TCP/IP ist praktisch als Protokollfamilie umgesetzt",
-      "OSI und TCP/IP sind exakt dasselbe Modell",
-      "TCP/IP besitzt sieben Schichten und OSI vier",
-      "OSI ist ausschließlich ein Webprotokoll"
-    ],
-    c: 0,
-    e: "OSI ist ein Referenzmodell, während TCP/IP eine praktisch eingesetzte Protokollfamilie darstellt."
-  }
-  // =========================
-  // WEITERE PRÜFUNGSFRAGEN
-  // =========================
-
-  {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welche Aussage beschreibt ein Endsystem korrekt?",
-    a: [
-      "Ein Endsystem steht am Rand der Kommunikation und sendet oder empfängt Anwendungsdaten",
-      "Ein Endsystem leitet ausschließlich Pakete zwischen Netzwerken weiter",
-      "Ein Endsystem ist immer ein Switch",
-      "Ein Endsystem arbeitet nur auf Layer 1"
-    ],
-    c: 0,
-    e: "Endsysteme wie PCs oder Server sind die Quelle oder das Ziel einer Kommunikation."
-  },
-  {
-    cat: "Netzwerk-Grundlagen",
-    q: "Welche Geräte können in einem Netzwerk als Zwischensysteme eingesetzt werden?",
-    a: [
-      "Switches und Router",
-      "Nur Drucker",
-      "Nur Smartphones",
-      "Nur Tastaturen"
-    ],
-    c: 0,
-    e: "Switches und Router vermitteln Daten zwischen Netzwerkgeräten."
-  },
-  {
-    cat: "Server & Netzwerktypen",
-    q: "Welche Netzwerkgröße passt typischerweise zu einem LAN?",
-    a: [
-      "Ein Gebäude oder ein begrenztes lokales Gebiet",
-      "Die gesamte Welt",
-      "Ausschließlich mehrere Kontinente",
-      "Nur eine einzelne Anwendung"
-    ],
-    c: 0,
-    e: "Ein LAN deckt typischerweise einen lokal begrenzten Bereich ab."
-  },
-  {
-    cat: "Server & Netzwerktypen",
-    q: "Was ist ein Enterprise-LAN?",
-    a: [
-      "Ein umfangreicheres lokales Netzwerk für eine Organisation oder ein Unternehmen",
-      "Ein einzelner Heimcomputer",
-      "Ein ausschließlich drahtloser Drucker",
-      "Ein einzelnes Netzwerkkabel"
-    ],
-    c: 0,
-    e: "Ein Enterprise-LAN ist für größere organisatorische Umgebungen ausgelegt."
-  },
-  {
-    cat: "Server & Netzwerktypen",
-    q: "Was beschreibt ein CAN im Zusammenhang mit Netzwerken?",
-    a: [
-      "Ein Campus Area Network zur Vernetzung mehrerer lokaler Bereiche eines Campus",
-      "Ein ausschließlich privates Heimnetzwerk",
-      "Ein einzelner Computer",
-      "Ein Internetbrowser"
-    ],
-    c: 0,
-    e: "CAN steht für Campus Area Network und verbindet mehrere lokale Bereiche innerhalb eines Campus."
-  },
-  {
-    cat: "OSI-Grundlagen",
-    q: "Welche Schicht des OSI-Modells ist für Routing zuständig?",
-    a: [
-      "Layer 3 – Network",
-      "Layer 1 – Physical",
-      "Layer 2 – Data Link",
-      "Layer 6 – Presentation"
-    ],
-    c: 0,
-    e: "Routing und logische Adressierung gehören zur Network Layer."
-  },
-  {
-    cat: "OSI-Grundlagen",
-    q: "Welche Schicht ist für die lokale Weiterleitung innerhalb eines Netzwerksegments zuständig?",
-    a: [
-      "Layer 2 – Data Link",
-      "Layer 3 – Network",
-      "Layer 4 – Transport",
-      "Layer 7 – Application"
-    ],
-    c: 0,
-    e: "Layer 2 übernimmt unter anderem die lokale Weiterleitung innerhalb eines Netzwerksegments."
-  },
-  {
-    cat: "OSI-Grundlagen",
-    q: "Welche OSI-Schicht stellt eine Schnittstelle für Anwendungen bereit?",
-    a: [
-      "Layer 7 – Application",
-      "Layer 1 – Physical",
-      "Layer 2 – Data Link",
-      "Layer 3 – Network"
-    ],
-    c: 0,
-    e: "Die Application Layer stellt Funktionen und Schnittstellen für Anwendungen bereit."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Was wird beim Durchlaufen einer Schicht bei der Kapselung typischerweise hinzugefügt?",
-    a: [
-      "Kontrollinformationen wie ein Header",
-      "Ein neuer Monitor",
-      "Eine neue Netzwerkkarte",
-      "Ein Benutzerkonto"
-    ],
-    c: 0,
-    e: "Schichten ergänzen die Daten um Informationen, die für ihre jeweilige Aufgabe benötigt werden."
-  },
-  {
-    cat: "Kapselung & PDU",
-    q: "Welche PDU gehört zur Data-Link-Schicht?",
-    a: [
+    "cat": "Kapselung & PDU",
+    "q": "Welche PDU gehört zur Sicherungsschicht?",
+    "a": [
       "Frame",
       "Segment",
-      "Packet",
+      "Paket",
       "Daten"
     ],
-    c: 0,
-    e: "Die PDU der Data-Link-Schicht wird als Frame bezeichnet."
+    "c": 0,
+    "e": "Die Sicherungsschicht erzeugt beziehungsweise verarbeitet Frames."
   },
   {
-    cat: "Kapselung & PDU",
-    q: "Welche PDU gehört zur Network Layer?",
-    a: [
-      "Packet bzw. Datagram",
-      "Frame",
-      "Segment",
-      "Bit"
+    "cat": "Kapselung & PDU",
+    "q": "Was geschieht bei der Kapselung auf der Transportschicht?",
+    "a": [
+      "Ein Transport-Header mit unter anderem Portnummern wird ergänzt.",
+      "Ein Frame-Trailer wird entfernt und ein Bitstrom erzeugt.",
+      "Eine MAC-Adresse wird durch eine IP-Adresse ersetzt.",
+      "Die Anwendung wird beendet und neu gestartet."
     ],
-    c: 0,
-    e: "Die Network Layer verwendet als PDU ein Packet bzw. Datagram."
+    "c": 0,
+    "e": "Die Transportschicht ergänzt einen Header mit Informationen wie Quell- und Zielport."
   },
   {
-    cat: "Kapselung & PDU",
-    q: "Welche PDU gehört zur Transport Layer bei TCP?",
-    a: [
-      "Segment",
-      "Frame",
-      "Packet",
-      "Bit"
+    "cat": "Kapselung & PDU",
+    "q": "Welche Information gehört typischerweise in den Header der Netzwerkschicht?",
+    "a": [
+      "Logische Quell- und Zieladressen",
+      "Die elektrische Spannung eines Kabelsignals",
+      "Der Name der geöffneten Browserseite",
+      "Die Anzahl der angeschlossenen Switch-Ports"
     ],
-    c: 0,
-    e: "Bei TCP wird die PDU der Transportschicht als Segment bezeichnet."
+    "c": 0,
+    "e": "Der Header der Netzwerkschicht enthält die logischen Adressen von Quelle und Ziel."
   },
   {
-    cat: "Adressierung & Geräte",
-    q: "Welche Kombination ordnet die Adressen korrekt zu?",
-    a: [
-      "MAC = lokal auf Layer 2, IP = logisch auf Layer 3",
-      "MAC = Layer 7, IP = Layer 1",
-      "MAC = Transport Layer, IP = Application Layer",
-      "MAC und IP gehören ausschließlich zu Layer 1"
+    "cat": "Kapselung & PDU",
+    "q": "Was passiert bei der Dekapselung auf dem empfangenden System?",
+    "a": [
+      "Die Header werden schichtweise ausgewertet und entfernt.",
+      "Die Daten werden von unten nach oben immer weiter gekapselt.",
+      "Jede Schicht fügt dauerhaft einen weiteren Header hinzu.",
+      "Das empfangende System überspringt die unteren Schichten vollständig."
     ],
-    c: 0,
-    e: "MAC-Adressen gehören zur lokalen Layer-2-Kommunikation, IP-Adressen zur logischen Layer-3-Kommunikation."
+    "c": 0,
+    "e": "Beim Empfänger läuft der Vorgang umgekehrt: Header werden ausgewertet und entfernt."
   },
   {
-    cat: "Adressierung & Geräte",
-    q: "Welche Information wird durch eine Portnummer hauptsächlich bestimmt?",
-    a: [
-      "Welche Anwendung bzw. welcher Dienst die Daten erhalten soll",
-      "Welches Kabel verwendet wird",
-      "Welche MAC-Adresse ein Switch besitzt",
-      "Welche physische Spannung verwendet wird"
+    "cat": "Kapselung & PDU",
+    "q": "Welche Aussage beschreibt die Nutzlast einer PDU?",
+    "a": [
+      "Sie enthält die vollständige Dateneinheit der darüberliegenden Schicht.",
+      "Sie besteht ausschließlich aus dem Header der aktuellen Schicht.",
+      "Sie enthält nur die physische Leitung zwischen zwei Geräten.",
+      "Sie ist immer identisch mit dem Trailer des Frames."
     ],
-    c: 0,
-    e: "Ports ermöglichen auf der Transportschicht die Zuordnung zu Anwendungen bzw. Diensten."
+    "c": 0,
+    "e": "Die Nutzlast enthält aus Sicht der aktuellen Schicht die vollständige PDU der darüberliegenden Schicht."
   },
   {
-    cat: "Praxis & Protokolle",
-    q: "Welche Protokollart wird beim Aufruf einer Webseite typischerweise für die Webkommunikation verwendet?",
-    a: [
-      "HTTP bzw. HTTPS",
-      "DHCP",
-      "DNS ausschließlich",
-      "Ethernet ausschließlich"
+    "cat": "Kapselung & PDU",
+    "q": "Welche Funktion kann ein Trailer eines Ethernet-Frames übernehmen?",
+    "a": [
+      "Er kann eine Prüfinformation zur Fehlererkennung enthalten.",
+      "Er enthält ausschließlich die Zielportnummer der Anwendung.",
+      "Er ersetzt die logische Zieladresse des IP-Pakets.",
+      "Er legt fest, welche Anwendung den Frame geöffnet hat."
     ],
-    c: 0,
-    e: "HTTP und HTTPS sind Protokolle für Webkommunikation."
+    "c": 0,
+    "e": "Beim Ethernet-Frame kann der Trailer eine Prüfsumme zur Erkennung beschädigter Frames enthalten."
   },
   {
-    cat: "Praxis & Protokolle",
-    q: "Was kann die Ursache sein, wenn ein Hostname nicht in eine IP-Adresse aufgelöst werden kann?",
-    a: [
-      "Ein Problem bei der DNS-Auflösung",
-      "Ein defekter Monitor",
-      "Eine falsche Tastaturbelegung",
-      "Ein fehlender Druckertreiber"
+    "cat": "Kapselung & PDU",
+    "q": "Was passiert mit einem beschädigten Ethernet-Frame, wenn die Prüfsumme nicht stimmt?",
+    "a": [
+      "Der Frame wird als beschädigt erkannt und verworfen.",
+      "Der Router ersetzt automatisch alle Header und sendet ihn weiter.",
+      "Der Browser übernimmt den Frame direkt als Anwendungsdaten.",
+      "Die Portnummer wird geändert und der Frame unverändert weitergeleitet."
     ],
-    c: 0,
-    e: "Wenn ein Hostname nicht aufgelöst werden kann, liegt die Ursache beispielsweise beim DNS-Dienst oder der DNS-Kommunikation."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht enthält die Funktionen der OSI-Schichten 1 und 2?",
-    a: [
-      "Link",
-      "Internet",
-      "Transport",
-      "Application"
-    ],
-    c: 0,
-    e: "Die Link-Schicht des TCP/IP-Modells fasst OSI Physical und Data Link zusammen."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht enthält die Funktionen der OSI-Schicht 3?",
-    a: [
-      "Internet",
-      "Link",
-      "Transport",
-      "Application"
-    ],
-    c: 0,
-    e: "Die Internet-Schicht entspricht der OSI-Network-Layer."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Welche TCP/IP-Schicht enthält die Funktionen der OSI-Schicht 4?",
-    a: [
-      "Transport",
-      "Internet",
-      "Link",
-      "Application"
-    ],
-    c: 0,
-    e: "Die TCP/IP-Transportschicht entspricht der OSI-Transportschicht."
-  },
-  {
-    cat: "TCP/IP & OSI",
-    q: "Ein Techniker spricht von einem „Layer-3-Problem“. Was ist damit im OSI-Kontext gemeint?",
-    a: [
-      "Ein Problem auf der Network Layer, beispielsweise bei IP-Adressierung oder Routing",
-      "Ein Problem ausschließlich mit dem Netzwerkkabel",
-      "Ein Problem mit einer Anwendung auf Layer 7",
-      "Ein Problem mit der Darstellung von Daten auf Layer 6"
-    ],
-    c: 0,
-    e: "Layer 3 ist die Network Layer. Typische Themen sind IP-Adressierung und Routing."
+    "c": 0,
+    "e": "Stimmt die Prüfsumme nicht, wird der Frame als beschädigt erkannt und verworfen."
   },
 
-  // =========================
-  // ENDE DES FRAGENPOOLS
-  // =========================
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Welche Adresse gehört zur lokalen Adressierung der Data-Link-Schicht?",
+    "a": [
+      "MAC-Adresse",
+      "IP-Adresse",
+      "Portnummer",
+      "Webadresse"
+    ],
+    "c": 0,
+    "e": "Die Data-Link-Schicht nutzt Hardwareadressen wie MAC-Adressen für die lokale Weiterleitung."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Welche Adresse gehört zur Network-Schicht?",
+    "a": [
+      "IP-Adresse",
+      "MAC-Adresse",
+      "Portnummer",
+      "Dateipfad"
+    ],
+    "c": 0,
+    "e": "Die Network-Schicht verwendet logische Adressen wie IP-Adressen."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Wozu dient eine Portnummer?",
+    "a": [
+      "Sie ordnet Daten einem Dienst beziehungsweise einer Anwendung auf dem Zielhost zu.",
+      "Sie bestimmt den physischen Standort eines Switches.",
+      "Sie ersetzt die MAC-Adresse bei jeder lokalen Übertragung.",
+      "Sie beschreibt die Länge eines Ethernet-Kabels."
+    ],
+    "c": 0,
+    "e": "Portnummern gehören zur Transportschicht und helfen dabei, Daten dem passenden Dienst zuzuordnen."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Welches Gerät ist typischerweise der Vermittlungsschicht zugeordnet?",
+    "a": [
+      "Router",
+      "Switch",
+      "Repeater",
+      "Transceiver"
+    ],
+    "c": 0,
+    "e": "Router werden im Skript der Network-Schicht zugeordnet und leiten anhand logischer Adressen weiter."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Ein Switch soll einen Frame innerhalb eines Segments weiterleiten. Welche Information ist dafür zentral?",
+    "a": [
+      "Die Hardwareadresse des Zielgeräts",
+      "Die Portnummer der Anwendung",
+      "Die Sitzungskennung des Browsers",
+      "Der Name des Zielservers"
+    ],
+    "c": 0,
+    "e": "Switches leiten Frames anhand physischer Hardwareadressen weiter."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Warum kann ein Router einen Frame auf dem nächsten Netzwerkabschnitt mit anderen MAC-Adressen weiterleiten?",
+    "a": [
+      "MAC-Adressen gelten nur innerhalb des jeweiligen Segments.",
+      "MAC-Adressen beschreiben immer den gesamten End-to-End-Weg.",
+      "IP-Adressen werden nur innerhalb eines Switches verwendet.",
+      "Portnummern ersetzen beim Router die Hardwareadressen."
+    ],
+    "c": 0,
+    "e": "Das Skript betont, dass MAC-Adressen lokal im Segment gelten und sich an Routern ändern können."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Ein Problem betrifft Routing oder eine falsche IP-Konfiguration. Welche OSI-Schicht ist zuerst relevant?",
+    "a": [
+      "Schicht 3",
+      "Schicht 1",
+      "Schicht 2",
+      "Schicht 7"
+    ],
+    "c": 0,
+    "e": "Routing und IP-Adressierung gehören zur Vermittlungsschicht, also Layer 3."
+  },
+  {
+    "cat": "Adressierung & Geräte",
+    "q": "Ein Switch-Port ist aktiv, aber ein Gerät kann wegen einer falschen MAC-Zuordnung nicht korrekt kommunizieren. Welche Schicht ist besonders relevant?",
+    "a": [
+      "Schicht 2",
+      "Schicht 1",
+      "Schicht 3",
+      "Schicht 5"
+    ],
+    "c": 0,
+    "e": "MAC-Adressen und Switch-Weiterleitung gehören zur Sicherungsschicht, also Layer 2."
+  },
 
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Ein Notebook ruft eine Webseite ab. Welche Abfolge beschreibt die Kapselung am besten?",
+    "a": [
+      "HTTP-Daten werden über TCP, IP und Ethernet schrittweise verpackt.",
+      "Ethernet erzeugt zuerst die Anwendung und TCP entfernt danach die IP-Adresse.",
+      "Der Router erstellt die ursprünglichen Browserdaten erst am Zielserver.",
+      "Die Bitübertragungsschicht fügt nachträglich den HTTP-Header hinzu."
+    ],
+    "c": 0,
+    "e": "Bei der beschriebenen HTTP-Anfrage werden die Daten über TCP, IP und Ethernet gekapselt."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Welche Protokollkombination wird im Skript als Beispiel für einen Webseitenaufruf genannt?",
+    "a": [
+      "HTTP, TCP, IP und Ethernet",
+      "DNS, DHCP, QoS und VPN",
+      "FTP, UDP, ARP und Bluetooth",
+      "SMTP, POP3, ICMP und WLAN"
+    ],
+    "c": 0,
+    "e": "Das Beispiel beschreibt HTTP über TCP/IP und Ethernet."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Warum kann eine Anwendung trotz funktionierendem Kabel weiterhin nicht erreichbar sein?",
+    "a": [
+      "Fehler können auch auf höheren Schichten liegen.",
+      "Ein funktionierendes Kabel garantiert immer die Anwendungserreichbarkeit.",
+      "Die Physical-Schicht übernimmt automatisch alle Anwendungsfunktionen.",
+      "Ein Link macht Routing und Namensauflösung überflüssig."
+    ],
+    "c": 0,
+    "e": "Ein funktionierendes physisches Medium schließt Fehler auf Sicherungs-, Vermittlungs-, Transport- oder höheren Schichten nicht aus."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Welche Reihenfolge ist für eine schichtweise Fehlersuche sinnvoll?",
+    "a": [
+      "Physische Verbindung prüfen, dann höhere Schichten schrittweise untersuchen.",
+      "Direkt das Anwendungsprogramm neu installieren und danach das Kabel prüfen.",
+      "Zuerst die Anwendung analysieren und die physische Verbindung ignorieren.",
+      "Zuerst alle Router austauschen und danach die eigentliche Ursache suchen."
+    ],
+    "c": 0,
+    "e": "Die beschriebene Methode beginnt bei Schicht 1 und arbeitet sich nach oben."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Welche Aussage zur Peer-Kommunikation ist korrekt?",
+    "a": [
+      "Gleichrangige Schichten kommunizieren konzeptionell mit derselben Schicht des Gegenübers.",
+      "Jede Schicht kommuniziert ausschließlich mit dem darunterliegenden Kabel.",
+      "Nur Router können an Peer-Kommunikation beteiligt sein.",
+      "Peer-Kommunikation bedeutet, dass zwei Benutzerkonten Dateien austauschen."
+    ],
+    "c": 0,
+    "e": "Peer-Kommunikation beschreibt die konzeptionelle Kommunikation zwischen gleichen Schichten zweier Netzwerkknoten."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Was beschreibt die Interaktion benachbarter Schichten?",
+    "a": [
+      "Eine Schicht stellt der darüberliegenden einen Dienst bereit und nutzt den Dienst der darunterliegenden.",
+      "Zwei Router tauschen ausschließlich ihre Benutzeroberflächen aus.",
+      "Jede Schicht arbeitet vollständig unabhängig von allen anderen Schichten.",
+      "Nur die Anwendungsschicht darf Dienste anderer Schichten verwenden."
+    ],
+    "c": 0,
+    "e": "Benachbarte Schichten stehen in einer Dienstbeziehung: oben wird ein Dienst bereitgestellt, unten ein Dienst genutzt."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Was kann beim Wechsel von Kabel zu WLAN im Idealfall unverändert bleiben?",
+    "a": [
+      "Die Anwendung und die darüberliegenden Schichten",
+      "Das physische Übertragungsverfahren",
+      "Die konkrete Funk- oder Kabeltechnik",
+      "Die Arbeitsweise der unteren Schichten"
+    ],
+    "c": 0,
+    "e": "Beim Wechsel des Mediums ändern sich im Idealfall vor allem die unteren Schichten; die Anwendung bleibt unbeeinträchtigt."
+  },
+  {
+    "cat": "Praxis & Protokolle",
+    "q": "Warum werden OSI und TCP/IP in der Praxis gemeinsam betrachtet?",
+    "a": [
+      "OSI unterstützt die strukturierte Analyse, TCP/IP beschreibt die praktisch eingesetzte Protokollwelt.",
+      "Beide Modelle sind vollständig identisch und haben dieselbe Anzahl an Schichten.",
+      "TCP/IP wird nur in Lehrbüchern genutzt, während OSI alle Internetprotokolle implementiert.",
+      "OSI ersetzt technische Standards, während TCP/IP ausschließlich Hardware beschreibt."
+    ],
+    "c": 0,
+    "e": "Das Skript beschreibt OSI als feineres Analyse- und Referenzmodell und TCP/IP als praktisch implementierte Protokollwelt."
+  },
+
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Wie viele Schichten hat das im Skript beschriebene TCP/IP-Modell?",
+    "a": [
+      "Vier",
+      "Drei",
+      "Fünf",
+      "Sieben"
+    ],
+    "c": 0,
+    "e": "Das beschriebene TCP/IP-Modell umfasst vier Schichten."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche OSI-Schichten werden im TCP/IP Application Layer zusammengefasst?",
+    "a": [
+      "Application, Presentation und Session",
+      "Transport, Network und Data Link",
+      "Physical, Data Link und Network",
+      "Session, Transport und Network"
+    ],
+    "c": 0,
+    "e": "Der TCP/IP Application Layer umfasst die OSI-Schichten 5 bis 7."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche OSI-Schicht entspricht dem TCP/IP Transport Layer?",
+    "a": [
+      "Transport",
+      "Network",
+      "Data Link",
+      "Application"
+    ],
+    "c": 0,
+    "e": "Der TCP/IP Transport Layer entspricht der OSI-Transportschicht 4."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche OSI-Schicht entspricht dem TCP/IP Internet Layer?",
+    "a": [
+      "Network",
+      "Transport",
+      "Presentation",
+      "Physical"
+    ],
+    "c": 0,
+    "e": "Der Internet Layer übernimmt die Aufgaben der OSI-Network-Schicht."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche OSI-Schichten werden im TCP/IP Link Layer zusammengefasst?",
+    "a": [
+      "Data Link und Physical",
+      "Network und Transport",
+      "Session und Presentation",
+      "Application und Transport"
+    ],
+    "c": 0,
+    "e": "Der Link Layer deckt die Aufgaben von OSI-Schicht 1 und 2 ab."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Warum ist das OSI-Modell bei der Fehlersuche feiner als TCP/IP?",
+    "a": [
+      "OSI trennt Physical und Data Link, während TCP/IP beide im Link Layer zusammenfasst.",
+      "OSI besitzt weniger Schichten und fasst dadurch mehr Funktionen zusammen.",
+      "TCP/IP trennt jede Anwendung in drei eigene Schichten.",
+      "OSI und TCP/IP verwenden exakt dieselben Schichtgrenzen."
+    ],
+    "c": 0,
+    "e": "Die getrennten OSI-Schichten 1 und 2 erlauben eine feinere Unterscheidung als der gemeinsame TCP/IP Link Layer."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche Aussage beschreibt den Charakter des TCP/IP-Modells am besten?",
+    "a": [
+      "Es ist eng mit praktisch eingesetzten Protokollen und Standards verbunden.",
+      "Es ist ausschließlich ein theoretisches Modell ohne reale Implementierungen.",
+      "Es beschreibt nur physische Kabel und keine höheren Protokolle.",
+      "Es wurde als vollständige Kopie des OSI-Modells entwickelt."
+    ],
+    "c": 0,
+    "e": "Das Skript beschreibt TCP/IP als praktisch eingesetzte Protokollwelt, die das Internet trägt."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Welche Rolle hat RFC 1122 im Zusammenhang mit TCP/IP?",
+    "a": [
+      "Es beschreibt normative Anforderungen an Internet-Hosts.",
+      "Es ist ein siebenstufiges Ersatzmodell für Ethernet-Kabel.",
+      "Es definiert ausschließlich die Gestaltung von Switch-Gehäusen.",
+      "Es beschreibt nur die Benutzeroberfläche von Webbrowsern."
+    ],
+    "c": 0,
+    "e": "RFC 1122 enthält grundlegende Anforderungen an Internet-Hosts und ist normativer Bestandteil der technischen Grundlage."
+  },
+  {
+    "cat": "TCP/IP & OSI",
+    "q": "Ein Techniker spricht von einem „Layer-3-Problem“. Was ist damit im OSI-Kontext gemeint?",
+    "a": [
+      "Ein Problem der Vermittlungsschicht, etwa bei Routing oder IP-Adressierung.",
+      "Ein Problem der Bitübertragung, etwa ein defektes Kabel.",
+      "Ein Problem der Anwendungsschicht, etwa eine Weboberfläche.",
+      "Ein Problem der Darstellungsschicht, etwa eine Datenkompression."
+    ],
+    "c": 0,
+    "e": "Layer 3 bezeichnet im OSI-Modell die Network- beziehungsweise Vermittlungsschicht."
+  }
 ];
