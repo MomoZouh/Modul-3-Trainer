@@ -145,7 +145,13 @@ function finishQuiz(){
   showScreen("result");
 }
 
-document.getElementById("again").addEventListener("click",()=>startQuiz(currentCategory));
+document.getElementById("again").addEventListener("click",()=>{
+  if(currentCategory === "Alle Fragen · Zufall"){
+    startRandomQuiz();
+  }else{
+    startQuiz(currentCategory);
+  }
+});
 document.getElementById("choose").addEventListener("click",()=>showScreen("home"));
 backHome.addEventListener("click",()=>showScreen("home"));
 brandHome.addEventListener("click",(e)=>{e.preventDefault();showScreen("home")});
