@@ -12,9 +12,9 @@ function getEduBites(){
 }
 
 function getProgress(){
-  try {
+  try{
     return JSON.parse(localStorage.getItem("questionProgress") || "{}");
-  } catch(e) {
+  }catch(e){
     return {};
   }
 }
@@ -24,9 +24,9 @@ function saveProgress(progress){
 }
 
 function getWrongQuestions(){
-  try {
+  try{
     return JSON.parse(localStorage.getItem("wrongQuestions") || "[]");
-  } catch(e) {
+  }catch(e){
     return [];
   }
 }
@@ -40,20 +40,22 @@ function getLearnedCount(items){
   return items.filter(q => progress[q.id] === true).length;
 }
 
-function percentOf(items){
+function getPercent(items){
   if(!items.length) return 0;
   return Math.round((getLearnedCount(items) / items.length) * 100);
 }
 
-function makeCategoryCard(title, description, count, action, icon, extraHtml=""){
+function makeCategoryCard(title, description, count, action, icon, extraHtml="", extraClass=""){
   const el = document.createElement("div");
-  el.className = "category";
-  el.innerHTML = `<div class="icon">${icon}</div>
+  el.className = `category ${extraClass}`.trim();
+  el.innerHTML = `
+    <div class="icon">${icon}</div>
     <b>${title}</b>
     <small>${description}</small>
     ${extraHtml}
-    <button>${count} ${count === 1 ? "Frage" : "Fragen"} starten</button>`;
-  el.querySelector("button").addEventListener("click", action);
+    <button class="category-start">${count} ${count === 1 ? "Frage" : "Fragen"} starten</button>
+  `;
+  el.querySelector(".category-start").addEventListener("click", action);
   return el;
 }
 
@@ -65,12 +67,12 @@ function renderCategories(){
   eduBites.forEach((bite, i) => {
     const items = quizData.filter(q => (q.eduBite || "eduBite 1") === bite);
     const learned = getLearnedCount(items);
-    const pct = percentOf(items);
+    const pct = getPercent(items);
 
     categoryGrid.appendChild(
       makeCategoryCard(
         bite,
-        `${learned} / ${items.length} Fragen richtig gelernt · ${pct}%`,
+        `${learned} / ${items.length} Fragen schon richtig · ${pct}%`,
         items.length,
         () => startQuiz(bite, "edubite"),
         icons[i % icons.length]
@@ -78,46 +80,51 @@ function renderCategories(){
     );
   });
 
-  const allItems = quizData;
-  const allLearned = getLearnedCount(allItems);
-  const allPct = percentOf(allItems);
+  const allLearned = getLearnedCount(quizData);
+  const allPct = getPercent(quizData);
+  const openCount = quizData.length - allLearned;
 
-  let perEdu = eduBites.map(bite => {
+  const byBite = eduBites.map(bite => {
     const items = quizData.filter(q => (q.eduBite || "eduBite 1") === bite);
-    return `<div class="progress-line"><span>${bite}</span><strong>${getLearnedCount(items)} / ${items.length} · ${percentOf(items)}%</strong></div>`;
+    return `<div class="progress-detail">
+      <span>${bite}</span>
+      <strong>${getLearnedCount(items)} / ${items.length} · ${getPercent(items)}%</strong>
+    </div>`;
   }).join("");
 
-  const progressHtml = `
-    <div class="progress-summary">
-      <div class="progress-main"><strong>${allLearned} / ${allItems.length}</strong> richtig gelernt · <strong>${allPct}%</strong></div>
-      <div class="progress-track"><div class="progress-fill" style="width:${allPct}%"></div></div>
-      ${perEdu}
+  const randomExtra = `
+    <div class="category-progress">
+      <div class="progress-summary">
+        <strong>${allLearned} / ${quizData.length}</strong> richtig gelernt · <strong>${allPct}%</strong>
+      </div>
+      <div class="category-progress-track">
+        <div class="category-progress-fill" style="width:${allPct}%"></div>
+      </div>
+      ${byBite}
+      <button class="secondary open-button">🎯 Nur offene Fragen (${openCount})</button>
     </div>
   `;
 
   const randomCard = makeCategoryCard(
-    "🎲 Alle Fragen – Zufall",
+    "Alle Fragen – Zufall",
     "Alle Fragen aus allen eduBites komplett gemischt",
-    allItems.length,
+    quizData.length,
     startRandomQuiz,
     "🎲",
-    progressHtml
+    randomExtra,
+    "category-random"
   );
 
-  const openButton = document.createElement("button");
-  openButton.className = "secondary progress-open-button";
-  openButton.textContent = `🎯 Nur offene Fragen (${allItems.length - allLearned})`;
-  openButton.addEventListener("click", startOpenQuestionsQuiz);
-  randomCard.appendChild(openButton);
+  randomCard.querySelector(".open-button").addEventListener("click", startOpenQuestionsQuiz);
   categoryGrid.appendChild(randomCard);
 
-  const wrongCount = getWrongQuestions().filter(id => quizData.some(q => q.id === id)).length;
+  const wrongIds = getWrongQuestions().filter(id => quizData.some(q => q.id === id));
+  const wrongCount = wrongIds.length;
+
   categoryGrid.appendChild(
     makeCategoryCard(
-      "❌ Meine falschen Fragen",
-      wrongCount
-        ? `${wrongCount} falsch beantwortete Fragen gespeichert`
-        : "Noch keine falschen Fragen gespeichert",
+      "Meine falschen Fragen",
+      wrongCount ? `${wrongCount} Fragen zum erneuten Üben` : "Noch keine falschen Fragen gespeichert",
       wrongCount,
       startWrongQuiz,
       "❌"
@@ -157,11 +164,10 @@ function prepareQuestions(items){
 function startQuiz(category, mode="edubite"){
   currentCategory = category;
   currentMode = mode;
-  const items = quizData.filter(q =>
-    mode === "edubite"
-      ? (q.eduBite || "eduBite 1") === category
-      : q.cat === category
-  );
+  const items = mode === "edubite"
+    ? quizData.filter(q => (q.eduBite || "eduBite 1") === category)
+    : quizData.filter(q => q.cat === category);
+
   quizQuestions = prepareQuestions(items);
   current = 0;
   score = 0;
@@ -222,32 +228,35 @@ function startWrongQuiz(){
 }
 
 function showScreen(name){
-  [home,quiz,result].forEach(s=>s.classList.add("hidden"));
+  [home,quiz,result].forEach(s => s.classList.add("hidden"));
   document.getElementById(name).classList.remove("hidden");
-  backHome.classList.toggle("hidden",name==="home");
+  backHome.classList.toggle("hidden",name === "home");
   window.scrollTo({top:0,behavior:"instant"});
 }
 
 function renderQuestion(){
-  answered=false;
-  const item=quizQuestions[current];
+  answered = false;
+  const item = quizQuestions[current];
 
-  const label = currentMode === "random" || currentMode === "open"
-    ? (item.eduBite || "eduBite 1")
-    : currentCategory;
+  document.getElementById("quizCategory").textContent =
+    (currentMode === "random" || currentMode === "open")
+      ? (item.eduBite || "eduBite 1")
+      : currentCategory;
 
-  document.getElementById("quizCategory").textContent=label;
-  document.getElementById("counter").textContent=`Frage ${current+1} von ${quizQuestions.length}`;
-  document.getElementById("score").textContent=`${score} / ${current}`;
-  document.getElementById("qNumber").textContent=String(current+1).padStart(2,"0");
-  document.getElementById("question").textContent=item.q;
-  document.getElementById("progressBar").style.width=`${(current/quizQuestions.length)*100}%`;
+  document.getElementById("counter").textContent =
+    `Frage ${current+1} von ${quizQuestions.length}`;
+  document.getElementById("score").textContent = `${score} / ${current}`;
+  document.getElementById("qNumber").textContent =
+    String(current+1).padStart(2,"0");
+  document.getElementById("question").textContent = item.q;
+  document.getElementById("progressBar").style.width =
+    `${(current/quizQuestions.length)*100}%`;
 
-  const answers=document.getElementById("answers");
-  answers.innerHTML="";
-  document.getElementById("feedback").className="feedback hidden";
-  document.getElementById("feedback").textContent="";
-  document.getElementById("next").disabled=true;
+  const answers = document.getElementById("answers");
+  answers.innerHTML = "";
+  document.getElementById("feedback").className = "feedback hidden";
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("next").disabled = true;
 
   item.options.forEach((opt,i)=>{
     const btn=document.createElement("button");
@@ -259,43 +268,42 @@ function renderQuestion(){
 }
 
 function selectAnswer(index){
-  if(answered)return;
-  answered=true;
+  if(answered) return;
+  answered = true;
 
-  const item=quizQuestions[current];
-  const buttons=[...document.querySelectorAll(".answer")];
+  const item = quizQuestions[current];
+  const buttons = [...document.querySelectorAll(".answer")];
 
   buttons.forEach((b,i)=>{
     b.classList.add("locked");
-    if(item.options[i].correct)b.classList.add("correct");
-    if(i===index && !item.options[i].correct)b.classList.add("wrong");
+    if(item.options[i].correct) b.classList.add("correct");
+    if(i === index && !item.options[i].correct) b.classList.add("wrong");
   });
 
-  const isCorrect=item.options[index].correct;
-
-  // Permanent learning progress: a question is "learned" once answered correctly at least once.
+  const isCorrect = item.options[index].correct;
   const progress = getProgress();
+
   if(isCorrect){
     score++;
     progress[item.id] = true;
-  }
-  saveProgress(progress);
-
-  if(!isCorrect){
+  }else{
     wrongIdsThisQuiz.push(item.id);
   }
 
+  saveProgress(progress);
+
   const feedback=document.getElementById("feedback");
   feedback.className=`feedback ${isCorrect ? "ok" : "bad"}`;
-  feedback.textContent=(isCorrect ? "Richtig! " : "Nicht ganz. ")+item.e;
+  feedback.textContent=(isCorrect ? "Richtig! " : "Nicht ganz. ") + item.e;
 
   document.getElementById("score").textContent=`${score} / ${current+1}`;
   document.getElementById("next").disabled=false;
-  document.getElementById("progressBar").style.width=`${((current+1)/quizQuestions.length)*100}%`;
+  document.getElementById("progressBar").style.width=
+    `${((current+1)/quizQuestions.length)*100}%`;
 }
 
 document.getElementById("next").addEventListener("click",()=>{
-  if(!answered)return;
+  if(!answered) return;
 
   if(current < quizQuestions.length-1){
     current++;
@@ -321,8 +329,8 @@ function finishQuiz(){
 
   saveWrongQuestions([...existing]);
 
-  const total=quizQuestions.length;
-  const percent=Math.round((score/total)*100);
+  const total = quizQuestions.length;
+  const percent = Math.round((score/total)*100);
 
   document.getElementById("percent").textContent=`${percent}%`;
   document.getElementById("right").textContent=score;
@@ -330,9 +338,9 @@ function finishQuiz(){
   document.getElementById("total").textContent=total;
 
   document.getElementById("resultHeadline").textContent =
-    percent>=90 ? "Sehr stark!" :
-    percent>=75 ? "Gut gemacht!" :
-    percent>=50 ? "Schon ganz gut!" : "Weiter üben!";
+    percent >= 90 ? "Sehr stark!" :
+    percent >= 75 ? "Gut gemacht!" :
+    percent >= 50 ? "Schon ganz gut!" : "Weiter üben!";
 
   document.getElementById("resultDescription").textContent =
     `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
@@ -349,7 +357,7 @@ document.getElementById("again").addEventListener("click",()=>{
   }else if(currentMode === "wrong"){
     startWrongQuiz();
   }else{
-    startQuiz(currentCategory, "edubite");
+    startQuiz(currentCategory,"edubite");
   }
 });
 
