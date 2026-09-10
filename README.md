@@ -1,4 +1,4 @@
-# Netzwerk Prüfungstrainer
+# Modul 3 Trainer
 
 Eine statische Quiz-Seite für GitHub Pages.
 
