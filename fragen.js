@@ -4,6 +4,8 @@
 
 const quizData = [
   {
+    "id": "q1",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Welche Aussage beschreibt ein Netzwerk am treffendsten?",
     "a": [
@@ -16,6 +18,8 @@ const quizData = [
     "e": "Ein Netzwerk besteht aus mindestens zwei Systemen, einem Übertragungsmedium und gemeinsamen Protokollen."
   },
   {
+    "id": "q2",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Was bezeichnet der Begriff „Knoten“ in einem Netzwerk?",
     "a": [
@@ -28,6 +32,8 @@ const quizData = [
     "e": "Ein Knoten ist eine physisch vorhandene Netzwerkkomponente mit mindestens einer Netzwerkschnittstelle."
   },
   {
+    "id": "q3",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Was ist bei einem Netzwerk unter einem Link zu verstehen?",
     "a": [
@@ -40,6 +46,8 @@ const quizData = [
     "e": "Ein Link ist die physische oder logische Kommunikationsstrecke zwischen zwei Knoten."
   },
   {
+    "id": "q4",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Welches Gerät ist in der beschriebenen Funktion ein Endsystem?",
     "a": [
@@ -52,6 +60,8 @@ const quizData = [
     "e": "Ein Endsystem erzeugt oder konsumiert Daten. Ein Netzwerkdrucker gehört dazu."
   },
   {
+    "id": "q5",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Welche Eigenschaft kennzeichnet ein Zwischensystem?",
     "a": [
@@ -64,6 +74,8 @@ const quizData = [
     "e": "Zwischensysteme vermitteln Daten zwischen Endsystemen und müssen die Anwendungsebene nicht verstehen."
   },
   {
+    "id": "q6",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Zwei Geräte sind direkt mit einem einzigen Kabel verbunden. Welche Bezeichnung passt?",
     "a": [
@@ -76,6 +88,8 @@ const quizData = [
     "e": "Eine direkte Verbindung zwischen zwei Knoten über einen einzelnen Link ist ein Punkt-zu-Punkt-Link."
   },
   {
+    "id": "q7",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Ein Rechner leitet Daten zwischen zwei Netzwerksegmenten weiter. Welche Rolle kann er dadurch übernehmen?",
     "a": [
@@ -88,6 +102,8 @@ const quizData = [
     "e": "Die Rolle hängt von der konkreten Funktion ab. Durch Weiterleitung zwischen Segmenten kann ein Rechner wie ein Router als Zwischensystem arbeiten."
   },
   {
+    "id": "q8",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Welche Aussage zu Endsystemen und Zwischensystemen trifft zu?",
     "a": [
@@ -100,6 +116,8 @@ const quizData = [
     "e": "Die Einordnung richtet sich nach der konkreten Funktion, nicht allein nach der Bauform."
   },
   {
+    "id": "q9",
+    "eduBite": "eduBite 1",
     "cat": "Netzwerk-Grundlagen",
     "q": "Welche Kombination enthält ausschließlich typische Endsysteme?",
     "a": [
@@ -112,6 +130,8 @@ const quizData = [
     "e": "Notebooks, Server und Netzwerkdrucker erzeugen oder konsumieren Daten und sind damit typische Endsysteme."
   },
   {
+    "id": "q10",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Welche Rolle hat ein Client in einer Client-Server-Beziehung?",
     "a": [
@@ -124,6 +144,8 @@ const quizData = [
     "e": "Ein Client fordert Dienste oder Ressourcen eines Servers an und konsumiert sie."
   },
   {
+    "id": "q11",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Was ist ein wesentliches Merkmal des Client-Server-Modells?",
     "a": [
@@ -136,6 +158,8 @@ const quizData = [
     "e": "Im Client-Server-Modell liegen zentrale Dienste und maßgebliche Daten typischerweise auf Servern."
   },
   {
+    "id": "q12",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Welche Situation ist ein typisches Beispiel für Client-Server?",
     "a": [
@@ -148,6 +172,8 @@ const quizData = [
     "e": "Viele Clients greifen bei Client-Server auf einen zentral bereitgestellten Dienst wie eine Dateifreigabe zu."
   },
   {
+    "id": "q13",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Welcher Vorteil entsteht durch zentrale Datenhaltung?",
     "a": [
@@ -160,6 +186,8 @@ const quizData = [
     "e": "Zentrale Datenhaltung erleichtert die Datensicherung, weil die maßgeblichen Daten an einer zentralen Stelle liegen."
   },
   {
+    "id": "q14",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Was ist ein Single Point of Failure im Client-Server-Modell?",
     "a": [
@@ -172,6 +200,8 @@ const quizData = [
     "e": "Ein zentraler Server kann zum Single Point of Failure werden, wenn alle Clients von seinen Diensten abhängen."
   },
   {
+    "id": "q15",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Was kennzeichnet ein Peer-to-Peer-Netzwerk?",
     "a": [
@@ -184,6 +214,8 @@ const quizData = [
     "e": "Bei P2P sind die Teilnehmer grundsätzlich gleichberechtigt und können Anbieter und Nutzer von Ressourcen sein."
   },
   {
+    "id": "q16",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Warum wird P2P bei kleinen Gruppen häufig eingesetzt?",
     "a": [
@@ -196,6 +228,8 @@ const quizData = [
     "e": "P2P kann mit geringem finanziellen und organisatorischen Aufwand ohne dedizierte Serverhardware aufgebaut werden."
   },
   {
+    "id": "q17",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Welcher Nachteil wird bei P2P mit wachsender Teilnehmerzahl besonders relevant?",
     "a": [
@@ -208,6 +242,8 @@ const quizData = [
     "e": "Ohne zentrale Verwaltung wird die Koordination bei vielen Teilnehmern zunehmend unübersichtlich."
   },
   {
+    "id": "q18",
+    "eduBite": "eduBite 1",
     "cat": "Client-Server & P2P",
     "q": "Was unterscheidet strukturierte von unstrukturierten P2P-Netzen?",
     "a": [
@@ -220,6 +256,8 @@ const quizData = [
     "e": "Strukturierte P2P-Netze organisieren Teilnehmer so, dass Ressourcen gezielter gefunden werden können."
   },
   {
+    "id": "q19",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Nach welchen beiden Kriterien werden Netzwerktypen besonders betrachtet?",
     "a": [
@@ -232,6 +270,8 @@ const quizData = [
     "e": "Die Skripte unterscheiden Netzwerktypen vor allem nach Größe und Reichweite."
   },
   {
+    "id": "q20",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Welche Umgebung passt am ehesten zu SOHO?",
     "a": [
@@ -244,6 +284,8 @@ const quizData = [
     "e": "SOHO steht für Small Office/Home Office und umfasst typischerweise etwa ein bis zehn Personen."
   },
   {
+    "id": "q21",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Was ist typisch für ein SME-Netzwerk?",
     "a": [
@@ -256,6 +298,8 @@ const quizData = [
     "e": "SME-Netze unterstützen typischerweise mehrere Dutzend Nutzer und nutzen strukturierte Verkabelung."
   },
   {
+    "id": "q22",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Welche Beschreibung passt am besten zu einem Enterprise-LAN?",
     "a": [
@@ -268,6 +312,8 @@ const quizData = [
     "e": "Enterprise-LANs umfassen typischerweise Hunderte bis Tausende Geräte und nutzen redundante Infrastruktur."
   },
   {
+    "id": "q23",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Was unterscheidet ein Datacenter-Netzwerk besonders von einem normalen Unternehmens-LAN?",
     "a": [
@@ -280,6 +326,8 @@ const quizData = [
     "e": "Das beschriebene Datacenter-Netzwerk beherbergt Server und Speichersysteme, keine gewöhnlichen Endnutzer-Clients."
   },
   {
+    "id": "q24",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Welche Aussage beschreibt ein WAN korrekt?",
     "a": [
@@ -292,6 +340,8 @@ const quizData = [
     "e": "Ein WAN verbindet mehrere räumlich getrennte Netzwerke über größere Entfernungen."
   },
   {
+    "id": "q25",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Warum ist die Betriebsverantwortung für die Unterscheidung von LAN und WAN wichtig?",
     "a": [
@@ -304,6 +354,8 @@ const quizData = [
     "e": "Bei einem WAN werden verbindende Strecken typischerweise von einem externen Anbieter betrieben."
   },
   {
+    "id": "q26",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Welche Entwicklung beschreibt einen typischen Wachstumspfad eines Unternehmens?",
     "a": [
@@ -316,6 +368,8 @@ const quizData = [
     "e": "Das Skript beschreibt SOHO, SME und Enterprise-LAN als idealtypischen Wachstumspfad."
   },
   {
+    "id": "q27",
+    "eduBite": "eduBite 1",
     "cat": "Server & Netzwerktypen",
     "q": "Welche Umgebung beschreibt ein PAN am besten?",
     "a": [
@@ -328,6 +382,8 @@ const quizData = [
     "e": "Ein PAN umfasst nur wenige Meter und verbindet typischerweise ein Gerät mit direkt zugehörigem Zubehör."
   },
   {
+    "id": "q28",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Was ist eine Netzwerk-Appliance?",
     "a": [
@@ -340,6 +396,8 @@ const quizData = [
     "e": "Eine Appliance ist ein spezialisierter Computer mit eigenem Betriebssystem und eigener Software."
   },
   {
+    "id": "q29",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Was unterscheidet eine virtuelle Appliance von einer physischen Appliance?",
     "a": [
@@ -352,6 +410,8 @@ const quizData = [
     "e": "Eine virtuelle Appliance erfüllt die Funktion als Software, typischerweise als virtuelle Maschine auf einem Hypervisor."
   },
   {
+    "id": "q30",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Hauptaufgabe hat ein Switch?",
     "a": [
@@ -364,6 +424,8 @@ const quizData = [
     "e": "Ein Switch arbeitet innerhalb eines Segments und leitet Frames anhand physischer Hardwareadressen weiter."
   },
   {
+    "id": "q31",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Aufgabe hat ein Router?",
     "a": [
@@ -376,6 +438,8 @@ const quizData = [
     "e": "Ein Router verbindet unterschiedliche Netzwerke und nutzt Netzwerkadressen sowie Routinginformationen."
   },
   {
+    "id": "q32",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Aufgabe übernimmt eine Firewall?",
     "a": [
@@ -388,6 +452,8 @@ const quizData = [
     "e": "Eine Firewall kontrolliert Datenverkehr anhand von Regeln und wird häufig an Netzwerkgrenzen eingesetzt."
   },
   {
+    "id": "q33",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Wann ist ein Load Balancer besonders sinnvoll?",
     "a": [
@@ -400,6 +466,8 @@ const quizData = [
     "e": "Ein Load Balancer verteilt eingehende Anfragen auf mehrere gleichwertige Server."
   },
   {
+    "id": "q34",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Aufgabe passt zu einem vorwärtsgerichteten Proxy?",
     "a": [
@@ -412,6 +480,8 @@ const quizData = [
     "e": "Ein Forward Proxy steht auf Clientseite und kann Internetzugriffe zentral filtern, protokollieren oder zwischenspeichern."
   },
   {
+    "id": "q35",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Funktion hat ein Wireless Access Point?",
     "a": [
@@ -424,6 +494,8 @@ const quizData = [
     "e": "Ein Access Point verbindet drahtlose Endgeräte mit dem bestehenden verkabelten Netzwerk."
   },
   {
+    "id": "q36",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Aufgabe erfüllt ein VPN?",
     "a": [
@@ -436,6 +508,8 @@ const quizData = [
     "e": "Ein VPN ermöglicht eine verschlüsselte Verbindung über ein öffentliches Netz zu einem internen Netzwerk."
   },
   {
+    "id": "q37",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Wozu dient Quality of Service?",
     "a": [
@@ -448,6 +522,8 @@ const quizData = [
     "e": "QoS kann zeitkritischen Datenverkehr, etwa Sprache oder Video, bei Engpässen bevorzugen."
   },
   {
+    "id": "q38",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welcher Dienst übersetzt für Menschen lesbare Namen in numerische Netzwerkadressen?",
     "a": [
@@ -460,6 +536,8 @@ const quizData = [
     "e": "Der Namensauflösungsdienst übersetzt lesbare Namen in numerische Adressen."
   },
   {
+    "id": "q39",
+    "eduBite": "eduBite 1",
     "cat": "Appliances & Dienste",
     "q": "Welche Aufgabe hat ein Dienst zur dynamischen Host-Konfiguration?",
     "a": [
@@ -472,6 +550,8 @@ const quizData = [
     "e": "Der Dienst weist neu angeschlossenen Geräten automatisch Netzwerkadressen und weitere Konfigurationsparameter zu."
   },
   {
+    "id": "q40",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Reihenfolge der OSI-Schichten ist von unten nach oben korrekt?",
     "a": [
@@ -484,6 +564,8 @@ const quizData = [
     "e": "Die sieben Schichten beginnen bei Physical und enden bei Application."
   },
   {
+    "id": "q41",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Kernaufgabe gehört zur Physical-Schicht?",
     "a": [
@@ -496,6 +578,8 @@ const quizData = [
     "e": "Schicht 1 ist für die physische Übertragung von Bits als Signal zuständig."
   },
   {
+    "id": "q42",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aufgabe gehört zur Data-Link-Schicht?",
     "a": [
@@ -508,6 +592,8 @@ const quizData = [
     "e": "Schicht 2 übernimmt lokale Adressierung und Weiterleitung im Segment."
   },
   {
+    "id": "q43",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aufgabe gehört zur Network-Schicht?",
     "a": [
@@ -520,6 +606,8 @@ const quizData = [
     "e": "Schicht 3 ist für logische Adressierung und Routing zwischen Netzwerken zuständig."
   },
   {
+    "id": "q44",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aufgabe gehört zur Transport-Schicht?",
     "a": [
@@ -532,6 +620,8 @@ const quizData = [
     "e": "Schicht 4 übernimmt Ende-zu-Ende-Zustellung, Portadressierung und Zuverlässigkeitsfunktionen."
   },
   {
+    "id": "q45",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aufgabe ist typisch für die Session-Schicht?",
     "a": [
@@ -544,6 +634,8 @@ const quizData = [
     "e": "Schicht 5 verwaltet Sitzungen beziehungsweise Dialoge."
   },
   {
+    "id": "q46",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Funktion gehört zur Presentation-Schicht?",
     "a": [
@@ -556,6 +648,8 @@ const quizData = [
     "e": "Schicht 6 behandelt unter anderem Formatumwandlung, Kompression und Verschlüsselung."
   },
   {
+    "id": "q47",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aufgabe hat die Application-Schicht?",
     "a": [
@@ -568,6 +662,8 @@ const quizData = [
     "e": "Schicht 7 stellt die Schnittstelle für Anwendungen wie Web oder Mail bereit."
   },
   {
+    "id": "q48",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Warum ist das OSI-Modell für die Fehlersuche hilfreich?",
     "a": [
@@ -580,6 +676,8 @@ const quizData = [
     "e": "Das Modell unterstützt eine schichtweise Fehlersuche, bei der Probleme gezielt eingegrenzt werden."
   },
   {
+    "id": "q49",
+    "eduBite": "eduBite 1",
     "cat": "OSI-Grundlagen",
     "q": "Welche Aussage beschreibt das OSI-Modell korrekt?",
     "a": [
@@ -592,6 +690,8 @@ const quizData = [
     "e": "OSI beschreibt Funktionen in sieben Schichten und dient als Referenzmodell."
   },
   {
+    "id": "q50",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche Reihenfolge beschreibt die Kapselung von oben nach unten korrekt?",
     "a": [
@@ -604,6 +704,8 @@ const quizData = [
     "e": "Beim Senden wird aus Daten ein Segment, daraus ein Paket, daraus ein Frame und schließlich eine Bitfolge."
   },
   {
+    "id": "q51",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche PDU gehört zur Transportschicht bei TCP?",
     "a": [
@@ -616,6 +718,8 @@ const quizData = [
     "e": "Ein TCP-Datenblock auf der Transportschicht wird als Segment bezeichnet."
   },
   {
+    "id": "q52",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche PDU gehört zur Sicherungsschicht?",
     "a": [
@@ -628,6 +732,8 @@ const quizData = [
     "e": "Die Sicherungsschicht erzeugt beziehungsweise verarbeitet Frames."
   },
   {
+    "id": "q53",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Was geschieht bei der Kapselung auf der Transportschicht?",
     "a": [
@@ -640,6 +746,8 @@ const quizData = [
     "e": "Die Transportschicht ergänzt einen Header mit Informationen wie Quell- und Zielport."
   },
   {
+    "id": "q54",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche Information gehört typischerweise in den Header der Netzwerkschicht?",
     "a": [
@@ -652,6 +760,8 @@ const quizData = [
     "e": "Der Header der Netzwerkschicht enthält die logischen Adressen von Quelle und Ziel."
   },
   {
+    "id": "q55",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Was passiert bei der Dekapselung auf dem empfangenden System?",
     "a": [
@@ -664,6 +774,8 @@ const quizData = [
     "e": "Beim Empfänger läuft der Vorgang umgekehrt: Header werden ausgewertet und entfernt."
   },
   {
+    "id": "q56",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche Aussage beschreibt die Nutzlast einer PDU?",
     "a": [
@@ -676,6 +788,8 @@ const quizData = [
     "e": "Die Nutzlast enthält aus Sicht der aktuellen Schicht die vollständige PDU der darüberliegenden Schicht."
   },
   {
+    "id": "q57",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Welche Funktion kann ein Trailer eines Ethernet-Frames übernehmen?",
     "a": [
@@ -688,6 +802,8 @@ const quizData = [
     "e": "Beim Ethernet-Frame kann der Trailer eine Prüfsumme zur Erkennung beschädigter Frames enthalten."
   },
   {
+    "id": "q58",
+    "eduBite": "eduBite 1",
     "cat": "Kapselung & PDU",
     "q": "Was passiert mit einem beschädigten Ethernet-Frame, wenn die Prüfsumme nicht stimmt?",
     "a": [
@@ -700,6 +816,8 @@ const quizData = [
     "e": "Stimmt die Prüfsumme nicht, wird der Frame als beschädigt erkannt und verworfen."
   },
   {
+    "id": "q59",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Welche Adresse gehört zur lokalen Adressierung der Data-Link-Schicht?",
     "a": [
@@ -712,6 +830,8 @@ const quizData = [
     "e": "Die Data-Link-Schicht nutzt Hardwareadressen wie MAC-Adressen für die lokale Weiterleitung."
   },
   {
+    "id": "q60",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Welche Adresse gehört zur Network-Schicht?",
     "a": [
@@ -724,6 +844,8 @@ const quizData = [
     "e": "Die Network-Schicht verwendet logische Adressen wie IP-Adressen."
   },
   {
+    "id": "q61",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Wozu dient eine Portnummer?",
     "a": [
@@ -736,6 +858,8 @@ const quizData = [
     "e": "Portnummern gehören zur Transportschicht und helfen dabei, Daten dem passenden Dienst zuzuordnen."
   },
   {
+    "id": "q62",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Welches Gerät ist typischerweise der Vermittlungsschicht zugeordnet?",
     "a": [
@@ -748,6 +872,8 @@ const quizData = [
     "e": "Router werden im Skript der Network-Schicht zugeordnet und leiten anhand logischer Adressen weiter."
   },
   {
+    "id": "q63",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Ein Switch soll einen Frame innerhalb eines Segments weiterleiten. Welche Information ist dafür zentral?",
     "a": [
@@ -760,6 +886,8 @@ const quizData = [
     "e": "Switches leiten Frames anhand physischer Hardwareadressen weiter."
   },
   {
+    "id": "q64",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Warum kann ein Router einen Frame auf dem nächsten Netzwerkabschnitt mit anderen MAC-Adressen weiterleiten?",
     "a": [
@@ -772,6 +900,8 @@ const quizData = [
     "e": "Das Skript betont, dass MAC-Adressen lokal im Segment gelten und sich an Routern ändern können."
   },
   {
+    "id": "q65",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Ein Problem betrifft Routing oder eine falsche IP-Konfiguration. Welche OSI-Schicht ist zuerst relevant?",
     "a": [
@@ -784,6 +914,8 @@ const quizData = [
     "e": "Routing und IP-Adressierung gehören zur Vermittlungsschicht, also Layer 3."
   },
   {
+    "id": "q66",
+    "eduBite": "eduBite 1",
     "cat": "Adressierung & Geräte",
     "q": "Ein Switch-Port ist aktiv, aber ein Gerät kann wegen einer falschen MAC-Zuordnung nicht korrekt kommunizieren. Welche Schicht ist besonders relevant?",
     "a": [
@@ -796,6 +928,8 @@ const quizData = [
     "e": "MAC-Adressen und Switch-Weiterleitung gehören zur Sicherungsschicht, also Layer 2."
   },
   {
+    "id": "q67",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Ein Notebook ruft eine Webseite ab. Welche Abfolge beschreibt die Kapselung am besten?",
     "a": [
@@ -808,6 +942,8 @@ const quizData = [
     "e": "Bei der beschriebenen HTTP-Anfrage werden die Daten über TCP, IP und Ethernet gekapselt."
   },
   {
+    "id": "q68",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Welche Protokollkombination wird im Skript als Beispiel für einen Webseitenaufruf genannt?",
     "a": [
@@ -820,6 +956,8 @@ const quizData = [
     "e": "Das Beispiel beschreibt HTTP über TCP/IP und Ethernet."
   },
   {
+    "id": "q69",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Warum kann eine Anwendung trotz funktionierendem Kabel weiterhin nicht erreichbar sein?",
     "a": [
@@ -832,6 +970,8 @@ const quizData = [
     "e": "Ein funktionierendes physisches Medium schließt Fehler auf Sicherungs-, Vermittlungs-, Transport- oder höheren Schichten nicht aus."
   },
   {
+    "id": "q70",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Welche Reihenfolge ist für eine schichtweise Fehlersuche sinnvoll?",
     "a": [
@@ -844,6 +984,8 @@ const quizData = [
     "e": "Die beschriebene Methode beginnt bei Schicht 1 und arbeitet sich nach oben."
   },
   {
+    "id": "q71",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Welche Aussage zur Peer-Kommunikation ist korrekt?",
     "a": [
@@ -856,6 +998,8 @@ const quizData = [
     "e": "Peer-Kommunikation beschreibt die konzeptionelle Kommunikation zwischen gleichen Schichten zweier Netzwerkknoten."
   },
   {
+    "id": "q72",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Was beschreibt die Interaktion benachbarter Schichten?",
     "a": [
@@ -868,6 +1012,8 @@ const quizData = [
     "e": "Benachbarte Schichten stehen in einer Dienstbeziehung: oben wird ein Dienst bereitgestellt, unten ein Dienst genutzt."
   },
   {
+    "id": "q73",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Was kann beim Wechsel von Kabel zu WLAN im Idealfall unverändert bleiben?",
     "a": [
@@ -880,6 +1026,8 @@ const quizData = [
     "e": "Beim Wechsel des Mediums ändern sich im Idealfall vor allem die unteren Schichten; die Anwendung bleibt unbeeinträchtigt."
   },
   {
+    "id": "q74",
+    "eduBite": "eduBite 1",
     "cat": "Praxis & Protokolle",
     "q": "Warum werden OSI und TCP/IP in der Praxis gemeinsam betrachtet?",
     "a": [
@@ -892,6 +1040,8 @@ const quizData = [
     "e": "Das Skript beschreibt OSI als feineres Analyse- und Referenzmodell und TCP/IP als praktisch implementierte Protokollwelt."
   },
   {
+    "id": "q75",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Wie viele Schichten hat das im Skript beschriebene TCP/IP-Modell?",
     "a": [
@@ -904,6 +1054,8 @@ const quizData = [
     "e": "Das beschriebene TCP/IP-Modell umfasst vier Schichten."
   },
   {
+    "id": "q76",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche OSI-Schichten werden im TCP/IP Application Layer zusammengefasst?",
     "a": [
@@ -916,6 +1068,8 @@ const quizData = [
     "e": "Der TCP/IP Application Layer umfasst die OSI-Schichten 5 bis 7."
   },
   {
+    "id": "q77",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche OSI-Schicht entspricht dem TCP/IP Transport Layer?",
     "a": [
@@ -928,6 +1082,8 @@ const quizData = [
     "e": "Der TCP/IP Transport Layer entspricht der OSI-Transportschicht 4."
   },
   {
+    "id": "q78",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche OSI-Schicht entspricht dem TCP/IP Internet Layer?",
     "a": [
@@ -940,6 +1096,8 @@ const quizData = [
     "e": "Der Internet Layer übernimmt die Aufgaben der OSI-Network-Schicht."
   },
   {
+    "id": "q79",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche OSI-Schichten werden im TCP/IP Link Layer zusammengefasst?",
     "a": [
@@ -952,6 +1110,8 @@ const quizData = [
     "e": "Der Link Layer deckt die Aufgaben von OSI-Schicht 1 und 2 ab."
   },
   {
+    "id": "q80",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Warum ist das OSI-Modell bei der Fehlersuche feiner als TCP/IP?",
     "a": [
@@ -964,6 +1124,8 @@ const quizData = [
     "e": "Die getrennten OSI-Schichten 1 und 2 erlauben eine feinere Unterscheidung als der gemeinsame TCP/IP Link Layer."
   },
   {
+    "id": "q81",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche Aussage beschreibt den Charakter des TCP/IP-Modells am besten?",
     "a": [
@@ -976,6 +1138,8 @@ const quizData = [
     "e": "Das Skript beschreibt TCP/IP als praktisch eingesetzte Protokollwelt, die das Internet trägt."
   },
   {
+    "id": "q82",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Welche Rolle hat RFC 1122 im Zusammenhang mit TCP/IP?",
     "a": [
@@ -988,6 +1152,8 @@ const quizData = [
     "e": "RFC 1122 enthält grundlegende Anforderungen an Internet-Hosts und ist normativer Bestandteil der technischen Grundlage."
   },
   {
+    "id": "q83",
+    "eduBite": "eduBite 1",
     "cat": "TCP/IP & OSI",
     "q": "Ein Techniker spricht von einem „Layer-3-Problem“. Was ist damit im OSI-Kontext gemeint?",
     "a": [
