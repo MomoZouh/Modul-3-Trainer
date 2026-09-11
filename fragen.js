@@ -1,6 +1,6 @@
-// Fragenpool aus den beiden Lernscripten
-// Keine Verweise auf "Präsentationen" oder "Lernscripte" in den Fragen.
-// script.js mischt die Antwortmöglichkeiten bei jedem Test neu.
+// Fragenpool für den Modul-3-Prüfungstrainer
+// Alle 103 Fragen gehören zu eduBite 1.
+// Die Fragen werden im Trainer zufällig gemischt.
 
 const quizData = [
   {
@@ -1165,7 +1165,6 @@ const quizData = [
     "c": 0,
     "e": "Layer 3 bezeichnet im OSI-Modell die Network- beziehungsweise Vermittlungsschicht."
   },
-[
   {
     "id": "q084",
     "eduBite": "eduBite 1",
@@ -1446,5 +1445,4 @@ const quizData = [
     "c": 0,
     "e": "Router werden typischerweise am Netzwerkrand eingesetzt, während Layer-3-Switches häufig interne VLANs mit hohem Durchsatz verbinden."
   }
-]
 ];
