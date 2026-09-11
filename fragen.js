@@ -1165,4 +1165,264 @@ const quizData = [
     "c": 0,
     "e": "Layer 3 bezeichnet im OSI-Modell die Network- beziehungsweise Vermittlungsschicht."
   }
+  {
+  "id": "q084",
+  "eduBite": "eduBite 2",
+  "q": "Auf welcher OSI-Schicht arbeitet ein Repeater primär?",
+  "a": [
+    "Schicht 1 – Physical",
+    "Schicht 2 – Data Link",
+    "Schicht 3 – Network",
+    "Schicht 4 – Transport"
+  ],
+  "c": 0,
+  "e": "Ein Repeater arbeitet auf Schicht 1 und regeneriert Signale, ohne Adressen oder Frame-Inhalte auszuwerten."
+},
+{
+  "id": "q085",
+  "eduBite": "eduBite 2",
+  "q": "Welche Aufgabe übernimmt ein Transceiver?",
+  "a": [
+    "Er sendet und empfängt Signale über das Übertragungsmedium.",
+    "Er entscheidet anhand von IP-Adressen über das Routing.",
+    "Er filtert Datenverkehr anhand einer ACL.",
+    "Er verteilt IP-Adressen an Clients."
+  ],
+  "c": 0,
+  "e": "Der Transceiver wandelt digitale Bitfolgen in übertragbare elektrische, optische oder Funksignale um und zurück."
+},
+{
+  "id": "q086",
+  "eduBite": "eduBite 2",
+  "q": "Was unterscheidet einen Hub grundlegend von einem Switch?",
+  "a": [
+    "Ein Hub leitet Signale an alle anderen Ports weiter, ein Switch leitet Frames gezielt weiter.",
+    "Ein Hub arbeitet auf Schicht 3, ein Switch auf Schicht 4.",
+    "Ein Hub verwendet IP-Adressen, ein Switch ausschließlich Portnummern.",
+    "Ein Hub kann nur drahtlos arbeiten, ein Switch nur über Glasfaser."
+  ],
+  "c": 0,
+  "e": "Ein Hub wiederholt eingehende Signale an alle anderen Ports. Ein Switch nutzt MAC-Adressen für eine gezielte Frame-Weiterleitung."
+},
+{
+  "id": "q087",
+  "eduBite": "eduBite 2",
+  "q": "Warum wurden Switches in modernen Netzwerken gegenüber Hubs bevorzugt?",
+  "a": [
+    "Switches ermöglichen gezielte Weiterleitung und bilden pro Port eigene Kollisionsdomänen.",
+    "Switches benötigen keine Netzwerkkarten.",
+    "Switches senden jeden Frame grundsätzlich an alle Ports.",
+    "Switches arbeiten ausschließlich auf Schicht 1."
+  ],
+  "c": 0,
+  "e": "Ein Switch reduziert unnötigen Verkehr und ermöglicht mehrere gleichzeitige Übertragungen, da jeder Port eine eigene Kollisionsdomäne bildet."
+},
+{
+  "id": "q088",
+  "eduBite": "eduBite 2",
+  "q": "Welche Information nutzt ein Switch für seine MAC-Adress-Lerntabelle?",
+  "a": [
+    "Die Quelladresse eingehender Frames",
+    "Die DNS-Serveradresse",
+    "Die Portnummer einer TCP-Verbindung",
+    "Die öffentliche IP-Adresse des Routers"
+  ],
+  "c": 0,
+  "e": "Der Switch wertet die Quell-MAC-Adresse eingehender Frames aus und lernt dadurch, über welchen Port die jeweilige MAC-Adresse erreichbar ist."
+},
+{
+  "id": "q089",
+  "eduBite": "eduBite 2",
+  "q": "Auf welcher OSI-Schicht arbeitet ein klassischer Switch konzeptionell?",
+  "a": [
+    "Schicht 1 – Physical",
+    "Schicht 2 – Data Link",
+    "Schicht 3 – Network",
+    "Schicht 7 – Application"
+  ],
+  "c": 1,
+  "e": "Ein Switch arbeitet konzeptionell auf Schicht 2 und leitet Frames anhand von MAC-Adressen weiter."
+},
+{
+  "id": "q090",
+  "eduBite": "eduBite 2",
+  "q": "Welche Hauptaufgabe hat ein Router?",
+  "a": [
+    "Er leitet Daten zwischen unterschiedlichen logischen Netzwerken weiter.",
+    "Er wiederholt jedes Signal an alle Ports.",
+    "Er wandelt Kupfersignale ausschließlich in Lichtsignale um.",
+    "Er speichert ausschließlich MAC-Adressen."
+  ],
+  "c": 0,
+  "e": "Ein Router arbeitet auf Schicht 3 und trifft Weiterleitungsentscheidungen anhand logischer Netzwerkadressen."
+},
+{
+  "id": "q091",
+  "eduBite": "eduBite 2",
+  "q": "Was ist eine wichtige Eigenschaft eines Access Points?",
+  "a": [
+    "Er bildet eine Bridge zwischen drahtlosen und kabelgebundenen Netzwerken.",
+    "Er ersetzt grundsätzlich jeden Router.",
+    "Er arbeitet ausschließlich mit öffentlichen IP-Adressen.",
+    "Er verstärkt ausschließlich elektrische Signale."
+  ],
+  "c": 0,
+  "e": "Ein Access Point verbindet drahtlose Stationen mit einem kabelgebundenen Netzwerk und arbeitet dabei primär auf Schicht 2."
+},
+{
+  "id": "q092",
+  "eduBite": "eduBite 2",
+  "q": "Was ist der Hauptunterschied zwischen einer Standard-ACL und einer Extended-ACL?",
+  "a": [
+    "Eine Standard-ACL prüft nur die Quelladresse, eine Extended-ACL kann zusätzlich Zieladresse, Protokoll und Port berücksichtigen.",
+    "Eine Standard-ACL arbeitet auf Schicht 1, eine Extended-ACL auf Schicht 7.",
+    "Eine Standard-ACL kann nur WLAN filtern, eine Extended-ACL nur Ethernet.",
+    "Eine Extended-ACL prüft ausschließlich die MAC-Adresse."
+  ],
+  "c": 0,
+  "e": "Standard-ACLs filtern anhand der Quelladresse. Extended-ACLs ermöglichen wesentlich präzisere Regeln mit Zieladresse, Protokoll und Portnummer."
+},
+{
+  "id": "q093",
+  "eduBite": "eduBite 2",
+  "q": "In welcher Reihenfolge werden die Regeln einer ACL ausgewertet?",
+  "a": [
+    "Von oben nach unten; die erste passende Regel entscheidet.",
+    "Von unten nach oben; die letzte Regel entscheidet.",
+    "Alle Regeln werden gleichzeitig ausgewertet.",
+    "Nur die letzte Regel wird berücksichtigt."
+  ],
+  "c": 0,
+  "e": "ACL-Regeln werden von oben nach unten geprüft. Sobald eine Regel zutrifft, wird deren Permit- oder Deny-Aktion angewendet."
+},
+{
+  "id": "q094",
+  "eduBite": "eduBite 2",
+  "q": "Was passiert mit Datenverkehr, der auf keine Regel einer ACL passt?",
+  "a": [
+    "Er wird durch das implizite Deny am Ende verworfen.",
+    "Er wird automatisch erlaubt.",
+    "Er wird an alle Switch-Ports weitergeleitet.",
+    "Er wird automatisch verschlüsselt."
+  ],
+  "c": 0,
+  "e": "Am Ende einer ACL steht ein implizites Deny. Verkehr, der keine vorherige Regel erfüllt, wird deshalb blockiert."
+},
+{
+  "id": "q095",
+  "eduBite": "eduBite 2",
+  "q": "Warum sollte eine spezifische ACL-Regel vor einer allgemeineren Regel stehen?",
+  "a": [
+    "Weil die erste passende Regel entscheidet und eine allgemeine Regel die spezifische Ausnahme sonst überdecken könnte.",
+    "Weil ACLs grundsätzlich nur zwei Regeln enthalten dürfen.",
+    "Weil spezifische Regeln immer auf Schicht 1 arbeiten.",
+    "Weil allgemeine Regeln niemals verwendet werden dürfen."
+  ],
+  "c": 0,
+  "e": "Da die erste zutreffende Regel entscheidet, muss eine spezifische Ausnahme vor einer allgemeineren Regel stehen."
+},
+{
+  "id": "q096",
+  "eduBite": "eduBite 2",
+  "q": "Welche Aufgabe übernimmt ein Multilayer-Switch?",
+  "a": [
+    "Er kombiniert Switching mit Hardware-basiertem Routing.",
+    "Er arbeitet ausschließlich als Signalverstärker.",
+    "Er ersetzt nur einen Transceiver.",
+    "Er kann ausschließlich DNS-Anfragen bearbeiten."
+  ],
+  "c": 0,
+  "e": "Ein Multilayer-Switch kann sowohl Frames auf Schicht 2 weiterleiten als auch Routing auf Schicht 3 übernehmen."
+},
+{
+  "id": "q097",
+  "eduBite": "eduBite 2",
+  "q": "Wofür wird ein Layer-3-Switch besonders häufig eingesetzt?",
+  "a": [
+    "Für Routing zwischen VLANs innerhalb einer Organisation.",
+    "Für die reine Verstärkung schwacher Signale.",
+    "Für die Umwandlung von Kupfer in Glasfaser.",
+    "Für die automatische Vergabe von DNS-Namen."
+  ],
+  "c": 0,
+  "e": "Layer-3-Switches werden besonders häufig für Inter-VLAN-Routing eingesetzt und erledigen die Routing-Funktion direkt in Switching-Hardware."
+},
+{
+  "id": "q098",
+  "eduBite": "eduBite 2",
+  "q": "Welche Funktionen vereint ein typischer SOHO-Router?",
+  "a": [
+    "Unter anderem Switch, Access Point, Routing, DHCP und Firewall-/Portfilterung.",
+    "Ausschließlich einen Transceiver und einen Repeater.",
+    "Nur einen Router und einen Glasfaser-Converter.",
+    "Ausschließlich Funktionen der Anwendungsschicht."
+  ],
+  "c": 0,
+  "e": "Ein SOHO-Router bündelt mehrere Funktionen in einem Gehäuse, darunter Schicht-1-Schnittstellen, Switch und Access Point, Routing sowie DHCP und Firewall-/Portfilterung."
+},
+{
+  "id": "q099",
+  "eduBite": "eduBite 2",
+  "q": "Welche Funktion übernimmt DHCP typischerweise im SOHO-Router?",
+  "a": [
+    "Es weist sich verbindenden Hosts automatisch IP-Adressen zu.",
+    "Es wandelt elektrische Signale in Lichtsignale um.",
+    "Es lernt MAC-Adressen des Switches.",
+    "Es erkennt Angriffssignaturen."
+  ],
+  "c": 0,
+  "e": "Der DHCP-Server des SOHO-Routers weist Clients automatisch IP-Adressen zu und kann dabei unter anderem Gateway- und DNS-Informationen mitgeben."
+},
+{
+  "id": "q100",
+  "eduBite": "eduBite 2",
+  "q": "Welcher Vorteil einer modularen Netzwerkarchitektur wird im Vergleich zu einem einzelnen SOHO-Router genannt?",
+  "a": [
+    "Einzelne Komponenten können separat erweitert oder redundant ausgelegt werden.",
+    "Alle Funktionen müssen weiterhin in einem Gehäuse bleiben.",
+    "Es gibt grundsätzlich keine Möglichkeit für mehrere Access Points.",
+    "Die gesamte Hardware muss bei jeder Änderung ausgetauscht werden."
+  ],
+  "c": 0,
+  "e": "Eine modulare Architektur ermöglicht separate, skalierbare und bei Bedarf redundante Komponenten."
+},
+{
+  "id": "q101",
+  "eduBite": "eduBite 2",
+  "q": "Welcher Nachteil kann bei einer virtualisierten Firewall entstehen?",
+  "a": [
+    "Eine Kompromittierung des Hypervisors könnte grundsätzlich auch die virtuelle Firewall betreffen.",
+    "Die Firewall kann niemals Ressourcen skalieren.",
+    "Sie benötigt zwingend fünf physische Geräte.",
+    "Sie kann grundsätzlich keine Netzwerkpakete filtern."
+  ],
+  "c": 0,
+  "e": "Wenn Firewall und andere Arbeitslasten auf derselben physischen Serverhardware laufen, kann eine Kompromittierung des Hypervisors auch die Firewall gefährden."
+},
+{
+  "id": "q102",
+  "eduBite": "eduBite 2",
+  "q": "Was ist ein IDS im Unterschied zu einem IPS?",
+  "a": [
+    "Ein IDS erkennt verdächtige Muster und erzeugt Alarme, während ein IPS zusätzlich aktiv eingreifen kann.",
+    "Ein IDS routet Pakete und ein IPS vergibt IP-Adressen.",
+    "Ein IDS arbeitet nur auf Schicht 1 und ein IPS nur auf Schicht 2.",
+    "Ein IDS ersetzt einen Switch und ein IPS einen Access Point."
+  ],
+  "c": 0,
+  "e": "Ein IDS überwacht den Datenverkehr und meldet verdächtige Muster. Ein IPS kann bei einer Erkennung zusätzlich den betroffenen Verkehr unterbinden."
+},
+{
+  "id": "q103",
+  "eduBite": "eduBite 2",
+  "q": "Welche Aussage beschreibt den Unterschied zwischen Router und Layer-3-Switch am besten?",
+  "a": [
+    "Router werden typischerweise am Netzwerkrand eingesetzt, Layer-3-Switches häufig innerhalb der Organisation für interne VLANs.",
+    "Router arbeiten nur auf Schicht 1, Layer-3-Switches nur auf Schicht 7.",
+    "Layer-3-Switches verbinden ausschließlich das Internet mit dem Provider.",
+    "Router besitzen grundsätzlich mehr Ports als Layer-3-Switches."
+  ],
+  "c": 0,
+  "e": "Der Router ist typischerweise für die Verbindung zu WAN/Internet zuständig, während Layer-3-Switches häufig interne VLANs mit hohem Durchsatz verbinden."
+}
 ];
